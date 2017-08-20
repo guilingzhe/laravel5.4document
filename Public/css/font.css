@@ -1,0 +1,11 @@
+@charset "utf-8";/* CSS Document */
+@font-face {
+    font-family: 'fangzhengheiti';
+    src: url('../other/fangzhengheiti.eot');
+    src: url('../other/fangzhengheiti.eot?#iefix') format('embedded-opentype'),
+    url('../other/fangzhengheiti.woff') format('woff'),
+    url('../other/fangzhengheiti.ttf') format('truetype'),
+    url('../other/fangzhengheiti.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
