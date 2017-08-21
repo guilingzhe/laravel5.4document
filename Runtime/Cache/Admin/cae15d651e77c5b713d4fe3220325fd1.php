@@ -1,5 +1,65 @@
-<include file="common/toubu" />
-<include file="common/zuoce" />
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理中心</title>
+	<link rel="stylesheet" href="/Public/admins/css/bootstrap.css">
+	<link rel="stylesheet" href="/Public/admins/css/blog.css">
+	<script src="/Public/admins/js/jquery.js"></script>
+	<script src="/Public/admins/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 text-left">
+					<!-- <img src="" alt="" style="width:60px;height:60px;border-radius:30px;"> -->
+					<h1><strong>后台管理中心</strong></h1>
+				</div>
+				<div id="you" class="col-sm-8 text-left">
+					<a href="" class="btn btn-success"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 前台首页</a>
+					&nbsp;
+					<a href="change.html" class="btn btn-info"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 密码修改</a>&nbsp;
+					<a href="" class="btn btn-danger"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> 退出登录</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<p></p>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-primary">
+    						<div class="panel-heading">模块管理</div>
+					        <div class="list-group">
+					            <a class="list-group-item" href="admin.html">管理员模块</a>
+					            <a class="list-group-item" href="user.html">用户模块</a>
+					        </div>
+						</div>
+							<div class="panel panel-primary">
+    						<div class="panel-heading">账户管理</div>
+					        <div class="list-group">
+					            <a class="list-group-item" href="recharge.html">充值记录</a>
+					            <a class="list-group-item" href="bid.html">投标记录</a>
+					             <a class="list-group-item" href="loan.html">借款记录</a>
+					             
+					        </div>
+						</div>
+						
+						<div class="panel panel-primary">
+    						<div class="panel-heading">新闻管理</div>
+					        <div class="list-group">
+					            <a class="list-group-item" href="newslist.html">新闻列表</a>
+					            <a class="list-group-item" href="newsadd.html">新闻发布</a>
+					            <a class="list-group-item" href="commlist.html">评论列表</a>
+					        </div>
+						</div>
+					</div>
+					<div class="col-sm-0"></div>
+				</div>
+			</div>
 
 			<div class="col-sm-10">
 				<ol class="breadcrumb">

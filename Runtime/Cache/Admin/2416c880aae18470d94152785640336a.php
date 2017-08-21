@@ -1,6 +1,38 @@
-<include file="common/toubu" />
-<include file="common/zuoce" />
-
+<?php if (!defined('THINK_PATH')) exit();?><include file="./common/toubu">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-primary">
+    						<div class="panel-heading">模块管理</div>
+					        <div class="list-group">
+					            <a class="list-group-item" href="admin.html">管理员模块</a>
+					            <a class="list-group-item" href="user.html">用户模块</a>
+					        </div>
+						</div>
+							<div class="panel panel-primary">
+    						<div class="panel-heading">账户管理</div>
+					        <div class="list-group">
+					            <a class="list-group-item" href="recharge.html">充值记录</a>
+					            <a class="list-group-item" href="bid.html">投标记录</a>
+					             <a class="list-group-item" href="loan.html">借款记录</a>
+					             
+					        </div>
+						</div>
+						
+						<div class="panel panel-primary">
+    						<div class="panel-heading">新闻管理</div>
+					        <div class="list-group">
+					            <a class="list-group-item" href="newslist.html">新闻列表</a>
+					            <a class="list-group-item" href="newsadd.html">新闻发布</a>
+					            <a class="list-group-item" href="commlist.html">评论列表</a>
+					        </div>
+						</div>
+					</div>
+					<div class="col-sm-0"></div>
+				</div>
+			</div>
 			<div class="col-sm-10">
 				<ol class="breadcrumb">
 				  <li><a href="index.html">首页</a></li>
