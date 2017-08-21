@@ -55,7 +55,7 @@ CREATE TABLE if not exists loan (
   status tinyint UNSIGNED not null COMMENT '发布状态 '
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '借款记录表';
 
-
+#新闻表
 CREATE TABLE if not exists news (
   news_id int(10) UNSIGNED NOT NULL COMMENT '新闻ID',
   title varchar(60) NOT NULL DEFAULT '' COMMENT '新闻标题',
@@ -67,7 +67,7 @@ CREATE TABLE if not exists news (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='新闻表';
 
 
-
+#评论表
 CREATE TABLE if not exists comment (
   comment_id int(10) UNSIGNED NOT NULL COMMENT '评论ID',
   news_id int(10) UNSIGNED NOT NULL COMMENT '新闻ID',
