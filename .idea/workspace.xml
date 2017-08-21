@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20525e0d-1e87-4763-93aa-7c7d439c8a5c" name="默认" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Common/17_08_21.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Common/17_08_21.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Home/17_08_21.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Home/17_08_21.log" />
-    </list>
+    <list default="true" id="20525e0d-1e87-4763-93aa-7c7d439c8a5c" name="默认" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,15 +160,15 @@
       <option name="presentableId" value="Default" />
       <updated>1503217349681</updated>
       <workItem from="1503217352029" duration="1823000" />
-      <workItem from="1503281539495" duration="17000" />
+      <workItem from="1503281539495" duration="225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1840000" />
+    <option name="totallyTimeSpent" value="2048000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="165" y="23" width="1670" height="988" extended-state="0" />
+    <frame x="165" y="23" width="1670" height="988" extended-state="1" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25438598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
