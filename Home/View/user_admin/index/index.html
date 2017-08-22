@@ -1,4 +1,4 @@
- <div style="position: relative; height:950px;">
+ <div style="position: relative; height:100%;">
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -138,7 +138,28 @@
 
 <script language="javascript" src="/public/admin/js/jquery.poshytip.js" type="text/javascript"></script>
 
+<script type="text/javascript">
 
+  $(function(){
+
+  $('.xtitle').poshytip({
+
+    className: 'tip-yellowsimple',
+
+    showOn: 'hover',
+
+    alignTo: 'target',
+
+    alignX: 'center',
+
+    alignY: 'top',
+
+    offsetX: 0,
+
+    offsetY: 5 
+
+  });
+</script>
 
 
 
@@ -757,17 +778,16 @@ $(window).scroll(function(){
 
 <!--中部开始-->
 
-<div class="Cmm" style="margin-top:10px;"> 
-<div class="user_list" > <a class="dw_top" href="/member" style=" background:#e74a4a; border:0px; color:#fff; font-size:18px;">帐户总览</a>
-  <div id="<dw_m_left></dw_m_left>">
+<div class="Cmm" style="margin-top:10px"> <div class="user_list" > <a class="dw_top" href="/member" style=" background:#e74a4a; border:0px; color:#fff; font-size:18px;">帐户总览</a>
+  <div id="dw_m_left">
   
     <div class="dv_r_5" > <a class="bt3"><span></span>资金管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/Home/Jiaxi/index" >资金流水</a></li>     
-        <li><a href="/Home/Jiaxi/index" >我要充值</a></li>
-        <li><a href="/Home/Jiaxi/index" >我要提现</a></li>
-        <li><a href="/Home/Jiaxi/index" >银行帐户</a></li>
+        <li><a href="/member/capital#fragment-2">资金流水</a></li>     
+        <li><a href="/member/charge#fragment-1">我要充值</a></li>
+        <li><a href="/member/withdraw#fragment-1">我要提现</a></li>
+        <li><a href="/member/bank#fragment-1">银行帐户</a></li>
         
       </ul>
     </div>
@@ -775,7 +795,7 @@ $(window).scroll(function(){
     <div class="dv_r_5"> <a class="bt5"><span></span>理财管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="{:U('Home/Toubiao/index')}" target="main">投标记录</a></li>
+        <li><a href="/member/tendout#fragment-3">投标记录</a></li>
         <!-- <li><a href="/member/current#fragment-1">活期理财</a></li> -->
     <li><a href="/member/borrowin#fragment-3">借款记录</a></li>
 <!--    <li><a href="/member/debt#fragment-1">债权转让</a></li> 
@@ -802,12 +822,129 @@ $(window).scroll(function(){
   </div>
 </div>
 
-    <!--个人中心修改开始-->
-    <div style="width: 800px;float: right;">
-      
-      <iframe src="{:U('Home/IndexUser/layout')}" frameborder="0" name="main" width="900" height="750"></iframe>
-    </div>
+  <div id="hy_right">
 
+    <!--个人中心修改开始-->
+
+    <div class="dw_list" style="margin-bottom: 0px;">
+
+      
+
+      <div class="dw_dierheng">
+
+        <div style="overflow:visible">
+
+          <div class="touxiang"> <a href="/member/user#fragment-1" title="点击进行头像更换">
+
+           <img style="width: 114px; height: 114px; border: 1px solid #dedede; border-radius:4px;" alt="点击进行头像更换" src="/public/admin/images/noavatar_middle.gif"></a> </div>
+
+          <div class="touxiang_right">
+
+            <div class="dw_p1">
+
+              <p>17610770080</p>
+
+            </div>
+
+            <div class="dw_p3">
+
+              <div class="dw_tip">
+
+                  <div class="dw_tip2">还未设支付密码<span ></span> <a  style="color:#0099DD" href="/member/user#fragment-3">[点此设置]</a><span ></span></div>
+
+                  <div class="dw_tip3"> </div>
+
+                  <div class="dw_tip5" id="dwtipkff"> </div>
+
+                </div>
+
+                <script type="text/javascript">
+
+                $('#dwtipkff').click(function(){
+
+                $(this).parent().hide();
+
+                });
+
+                </script>                                          <a href="/member/verify#fragment-2"><img alt="手机认证通过"  style="vertical-align:middle"; title="手机认证通过" src="/public/admin/images/phone.gif"/>&nbsp;<a  href="/member/user#fragment-3"><img alt="支付密码未设置"  style="vertical-align:middle"; title="支付密码未设置" src="/public/admin/images/mima_0.gif"/></a>&nbsp;<a  href="/member/sign"> 
+
+        </div>
+
+          </div>
+
+        </div>
+
+        <div class="heng2" style="overflow: inherit;">
+
+          <div>
+
+            <p style="margin-bottom: 20px;">可用资金：<em style="color: #ff5301;font-size: 20px;">￥0.00</em><span class="chongzhi" onclick="javascript:location.href=('/member/withdraw#fragment-1')" >提现</span><span onclick="javascript:location.href=('/member/charge#fragment-1')" class="chongzhi" style="margin-right: 10px;background: #f34e3d;border: 1px solid #f34e3d;color: #fff;">充值</span></p>
+
+            <div>
+
+              <img src="/public/admin/images/wenhao.png" style="display: block; float: left;margin: 7px 5px 0 0;cursor: pointer;" class="zichan_wen"/>
+
+              资产总额：<em>￥0.00</em> 元
+
+              <p class="zichan">
+
+                资产总额 = 可用资金 + 冻结资金 + 待收本金 + 待收利息；详情请见下方的资产负债表
+
+              </p>
+
+            </div>
+
+            <div style="margin-bottom: 0;position: relative;">
+
+              <img src="/public/admin/images/wenhao.png" style="display: block; float: left;margin: 7px 5px 0 0;cursor: pointer;" class="shouyi_wen"/>
+
+              今日收益：<em>￥0.00</em> 元
+
+              <span onclick="javascript:location.href=('/member/capital?start_time=2017-08-20&end_time=2017-08-20#fragment-2')"  style="margin-left: 16px; font-size: 12px;color: #008cb4;cursor: pointer;">查看详情</span>
+
+              <p class="shouyi" style="top: -66px;">
+
+                今日收益包括今日的回款利息、邀请好友奖励、投标奖励、微信注册红包、其他奖励；可在资金流水中查看详情
+
+              </p>
+
+            </div>
+
+            <script>
+
+                $(".zichan_wen").on("mouseover",function(){
+
+                  $(".zichan").css({"display":"block"})
+
+                }).on("mouseout",function(){
+
+                  $(".zichan").css({"display":"none"})
+
+                });
+
+                $(".shouyi_wen").on("mouseover",function(){
+
+                  $(".shouyi").css({"display":"block"})
+
+                }).on("mouseout",function(){
+
+                  $(".shouyi").css({"display":"none"})
+
+                })
+
+              </script>
+
+          </div>
+
+      <br>
+
+     <!-- <span style="margin-left:10px;">您有<b style="color:red;">&nbsp;￥0.00&nbsp;</b>注册奖励，<span style="color:red">（不可提现）</span></span>-->
+
+        </div>
+
+      </div>
+
+    </div>
 
     <!--个人中心修改结束-->
 
@@ -846,7 +983,127 @@ $(window).scroll(function(){
     <div class="clr"></div>
 
 
+    <div class="dw_list" style="margin-bottom:0 ">
 
+      <div id="dw_huadong">
+
+        <ul class="title">
+
+          <li class="on"><a>资产负债表</a></li>
+
+          <li><a>损益表</a></li>
+
+        </ul>
+
+        <div class="dw_2_show">
+
+          <div class="eq1">
+
+            <div class="dw_2_kuang eq1">
+
+              <div class="dw_2_title"> 资产总额<span style="float:right">￥0.00</span> </div>
+
+              <div class="dw_3_list">
+
+                <p><span style="float:left;">可用资金:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">冻结资金:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span class="xtitle" style="float:left;" title="待收总额=待收本金+待收利息">待收总额:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">待收本金:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">待收利息:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">待收加息:</span><span style="float:right">￥0.00</span></p>
+
+              </div>
+
+            </div>
+
+            <div class="dw_2_kuang eq2">
+
+              <div class="dw_2_title"> 负债总额<span style="float:right">￥0.00</span> </div>
+
+              <div class="dw_3_list">
+
+                <p><span class="xtitle" style="float:left;" title="待还总额=待还本金+待还利息">待还总额:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">待还本金:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">待还利息:</span><span style="float:right">￥0.00</span></p>
+
+                <p>&nbsp;</p>
+
+                <p>&nbsp;</p>
+
+              </div>
+
+            </div>
+
+            <div style="clear:both"></div>
+
+          </div>
+
+          <div class="eq2" style="display:none">
+
+            <div class="dw_2_kuang eq1">
+
+              <div class="dw_2_title"> 收入总额 <span style="float:right">￥0.00</span> </div>
+
+              <div class="dw_3_list">
+
+                <p><span style="float:left;">已赚利息:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">投标奖励:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">续投奖励:</span><span style="float:right">￥0.00</span></p>
+
+                <p ><span style="float:left;">推广奖励:</span><span style="float:right">￥0.00</span></p>
+
+                <p ><span style="float:left;">红包奖励:</span><span style="float:right">￥0.00</span></p>
+
+                <p ><span style="float:left;">加息劵奖励:</span><span style="float:right">￥0.00</span></p>
+
+                <p ><span style="float:left;">其他奖励:</span><span style="float:right">￥0.00</span></p>
+
+               
+
+              </div>
+
+            </div>
+
+            <div class="dw_2_kuang eq2">
+
+              <div class="dw_2_title"> 支出总额<span style="float:right">￥0.00</span> </div>
+
+              <div class="dw_3_list">
+
+                <p><span style="float:left;">支付利息:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">支付投标奖励:</span><span style="float:right">￥0.00</span></p>
+
+                <p><span style="float:left;">提现手续费:</span><span style="float:right">￥0.00</span></p>
+
+                <p ><span style="float:left;">会员及认证费用:</span><span style="float:right">￥0.00</span></p>
+
+                <p ><span style="float:left;">借款管理费:</span><span style="float:right">￥0.00</span></p>
+
+                <p ><span style="float:left;">逾期及催收费用:</span><span style="float:right">￥0.00</span></p>
+
+              </div>
+
+            </div>
+
+            <div style="clear:both"></div>
+
+          </div>
+
+        </div>
+
+        <div style="clear:both"></div>
+
+      </div>
 
     </div>
 
@@ -1206,6 +1463,20 @@ loadpopup();
 
 <div id="Christmas_zhe" style="display: none;"></div>
 
+<div class="tan_box"> 
+
+    <span class="tan_cha"></span>
+
+    <p class="op1">您还未设置电子签章，请<a target="_blank" href="/member/sign">立即设置</a>后再来投标。</p>
+
+    <p class="op2">·为了给投资者带来全方位的安全保障，手投网携手国内领先的第三方电子签章平台推出<span style="padding-left: 9px;">电子签章服务… <a target="_blank" href="http://www.ishoutou.com/gonggao/news/2753.html" style="color: #178cb5;">查看详情</a></span></p>
+
+    <p class="op3">·电子签章将用于用户在手投网平台签署的各项正式合同中，以保证电子合同的法律效力。</p>
+
+</div> 
+
+
+
 <script type="text/javascript">
 
     $(function(){       
@@ -1256,7 +1527,7 @@ loadpopup();
 
 
 
-<div class="VdFooter" style="clear: both;">
+<div class="VdFooter">
         <div class="footer">
             <!-- <div class="footerT">
                 <span class="yqlj">友情链接:</span>
@@ -1265,7 +1536,13 @@ loadpopup();
             </div> -->
             <div class="footerC">
                 <div class="f_l">
-
+                    <p><span><a href="/aboutus/partner.html" target="_blank">友情链接</a></span>
+                    <span><a href="/aboutus/yingcai.html" target="_blank">诚聘英才</a></span>
+                    <span><a href="/aboutus/lianxi.html" target="_blank">联系我们</a></span>
+                    <span style="display: none"><a href="/Index/download" target="_blank">交易软件</a></span>
+                    <span><a href="/aboutus/anquan.html" target="_blank">安全保障</a></span>
+                    <span><a href="/xueyuan/redian.html" >文投学院</a></span>
+                    </p>
                     <div class="guanzhu">
                         <span class="txt1">关注我们</span>
                         <span><a class="wb" ><img style="float:none;margin:0px;" alt="" src="/public/admin/images/20150709172433.png" /></a></span>
