@@ -31,7 +31,5 @@ class TouxiangController extends Controller {
    		if($re){
    			$this->redirect('Home/IndexUser/index',2,'上传成功');
    		}
-   		$re = json_encode($re);
-   		return $re;
    }
 }
