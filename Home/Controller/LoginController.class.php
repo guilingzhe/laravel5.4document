@@ -15,6 +15,12 @@ class LoginController extends Controller{
 		echo "<hr>";
 		echo $_SESSION[$email];*/
 		if($yzm == $_SESSION[$email]){
+			$data = D('user');
+			$data->name = $_POST['usernamesignup'];
+			$data->email = $_POST['emailsignup'];
+			$data->password = md5($_POST['passwordsignup'].C('SALT'));
+			$data->add();
+			// $data->save();
 			$this->success('注册成功','Home/Login/login',3);
 		}else{
 			$this->error('验证码错误');

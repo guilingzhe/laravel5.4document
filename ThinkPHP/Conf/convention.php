@@ -29,6 +29,8 @@ return  array(
     'APP_AUTOLOAD_LAYER'    =>  'Controller,Model', // 自动加载的应用类库层 关闭APP_USE_NAMESPACE后有效
     'APP_AUTOLOAD_PATH'     =>  '', // 自动加载的路径 关闭APP_USE_NAMESPACE后有效
 
+    /*密码加盐*/
+    'SALT'                  =>  'SICS64',
     /* Cookie设置 */
     'COOKIE_EXPIRE'         =>  0,       // Cookie有效期
     'COOKIE_DOMAIN'         =>  '',      // Cookie有效域名
