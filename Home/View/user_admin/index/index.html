@@ -484,31 +484,12 @@ $(function(){
 
     anvjson={
 
-      bbs:'<a href="/invest/index">出借产品</a>'
+      bbs:'<a href="/invest/index">出借产品</a>' ,
 
-        /*+'<a href="/invest/index?type=search&&stock_type=2">月月盈</a>'+
-
-        '<a href="/invest/index?type=search&&stock_type=4">打新宝</a>'+
-
-                '<a href="/debt/index">债权转让</a>'*/
-
-        ,
-
-          news:'<a href="/daystock/index">按天融资</a>'+
-
-        '<a href="/Monthstock/index">按月融资</a>'+
-
-        '<a href="/Imtrader/index">我是操盘手</a>',
-
-           post:'<a href="/Help/novice">新手指引</a>',
-
+      post:'<a href="/Help/novice">新手指引</a>',
       youhui:'<a href="/aboutus/jianjie.html">公司简介</a>'+
 
       '<a href="/aboutus/licheng.html">发展历程</a>'+
-
-      '<a href="/aboutus/lianxi.html">联系我们</a>'+
-
-      '<a href="/help/platform_data">平台数据</a>'
 
     };
 
@@ -833,7 +814,7 @@ $(window).scroll(function(){
 
         <div style="overflow:visible">
 
-          <div class="touxiang"> <a href="/member/user#fragment-1" title="点击进行头像更换">
+          <div class="touxiang"> <a href="{:U('Home/Touxiang/upload')}" title="点击进行头像更换">
 
            <img style="width: 114px; height: 114px; border: 1px solid #dedede; border-radius:4px;" alt="点击进行头像更换" src="/public/admin/images/noavatar_middle.gif"></a> </div>
 
