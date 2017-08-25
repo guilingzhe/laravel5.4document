@@ -101,7 +101,7 @@
         </div>
 </body>
 <script>
-    email.onclick = function(){
+    function send(){
         var ee = document.getElementById('emailsignup');
         var email ='email='+ee.value;
         // console.log(email);
@@ -117,13 +117,13 @@
         xhr.send(null);
     }
 
-
-    var wait=60;  
-    function time(o) {  
+    var o = document.getElementById('email');
+    var wait=20;  
+    function time() {  
         if (wait == 0) {  
             o.removeAttribute("disabled");            
             o.value="免费获取验证码";  
-            wait = 60;  
+            wait = 20;  
         } else {  
             o.setAttribute("disabled", true);  
             o.value="重新发送(" + wait + ")";  
@@ -133,10 +133,11 @@
             },  
             1000)  
         }  
-    }  
-    document.getElementById("email").onclick=function(){
-        time(this);
-    } 
+    }
+
+
+    email.addEventListener('click',send,false);
+    email.addEventListener('click',time,false);
 
 
 </script>
