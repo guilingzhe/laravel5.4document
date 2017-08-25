@@ -40,7 +40,7 @@ return  array(
     'COOKIE_HTTPONLY'       =>  '',      // Cookie httponly设置
 
     /* 默认设定 */
-    'DEFAULT_M_LAYER'       =>  'Model', // 默认的模型层名称
+    'DEFAULT_M_LAYER'       =>  'Model', // 默认的模型层名称,模型层可以分为Model,Logic,Service三层;
     'DEFAULT_C_LAYER'       =>  'Controller', // 默认的控制器层名称
     'DEFAULT_V_LAYER'       =>  'View', // 默认的视图层名称
     'DEFAULT_LANG'          =>  'zh-cn', // 默认语言
