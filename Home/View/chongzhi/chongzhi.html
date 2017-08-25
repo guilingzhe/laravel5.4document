@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="operation-con">
-          <form id="sub" class="form form-aligned" action="{:U('Home/chongzhi/charge')}" method="post" onkeydown="if(event.keyCode==13)return false;">
+          <form id="fm" class="form form-aligned" action="{:U('Home/chongzhi/pay')}" method="post">
             <div class="xjk-operation-con">
               <ul class="operation-area">
                 <li class="operation-list mb30 clearfix">
@@ -45,7 +45,8 @@
                       <a href="#" target="_blank">了解详情&gt;</a></div>
                     <div class="sure-area" id="confirmBtn">
                       <a href="#" class=""></a>
-                      <input type="submit" id="sub" value="确认转入" class="sure-btn fl">
+                      <input type="submit" id="sub" value="确认充值" class="sure-btn fl">
+                      <!-- <a href="{:U('Home/chongzhi/pay')}" class="sure-btn fl">确认充值</a> -->
                       <span id="couponSelectedInfo" style="color:#f52f3e;font-size:14px;margin-left:20px"></span>
                     </div>
                   </div>
@@ -97,17 +98,17 @@
   <!--footer end-->
 
 </body>
-<!-- <script type="text/javascript">
-var inp = document.getElementById('amount');
-var sub = document.getElementById('sub');
-    inp.onblur = function re()
-    {
-        if(inp.value < 1) {
-            // alert(sub);
-            sub.disabled = true;
-        }else {
-          sub.disabled = false;
+<script type="text/javascript">
+
+    var fm = document.getElementById('fm');
+    var inp = document.getElementsByTagName('input');
+    fm.onsubmit = function() {
+        var money = /^[0-9]*[1-9][0-9]*$/;
+        if(!money.test(inp[0].value)) {
+            alert('请填写正确金额!');
+            return false;
         }
     }
-</script> -->
+
+</script>
 </html>
