@@ -13,19 +13,23 @@
 				    	<div class="col-sm-12 table-response">
 							<table class="table table-hover table-striped">
 								<tr>
-									<th>充值编码</th>
+									<th>投标项目编码</th>
+									<th>投标用户编码</th>
 									<th>日期</th>
-									<th>金额</th>
+									<th>投标金额</th>
 									<th>币种</th>
-									<th>余额</th>
+									<!-- <th>余额</th> -->
 								</tr>
+								<foreach name="list" item="v">
 								<tr>
-									<td>P_001</td>
-									<td>Laoban</td>
-									<td>123456</td>
+									<td>{$v['bid_id']}</td>
+									<td>{$v['user_id']}</td>
+									<td>{:date('Y/m/d H:i',$v['bid_time'])}</td>
+									<td>{$v['bid_money']}</td>
 									<td>CNY</td>
-									<td>13600000000</td>
+									<!-- <td>13600000000</td> -->
 								</tr>
+								</foreach>
 							</table>
 					    </div>
 					</div>

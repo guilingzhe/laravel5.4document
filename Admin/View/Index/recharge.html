@@ -14,18 +14,22 @@
 							<table class="table table-hover table-striped">
 								<tr>
 									<th>充值编码</th>
+									<th>用户编号</th>
 									<th>日期</th>
 									<th>金额</th>
 									<th>币种</th>
 									<th>余额</th>
 								</tr>
+								<foreach name="list" item="v">
 								<tr>
-									<td>P_001</td>
-									<td>Laoban</td>
-									<td>123456</td>
+									<td>{$v['re_id']}</td>
+									<td>{$v['user_id']}</td>
+									<td>{:date("Y/m/d H:i",$v['re_time'])}</td>
+									<td>{$v['amount']}</td>
 									<td>CNY</td>
-									<td>13600000000</td>
+									<td>1000</td>
 								</tr>
+								</foreach>
 							</table>
 					    </div>
 					</div>

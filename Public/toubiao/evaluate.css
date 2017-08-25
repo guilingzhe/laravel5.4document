@@ -1,0 +1,91 @@
+
+.surveyQuestions .titleWrap  h3  a{ float:right; color: #e74a49; padding-right:20px;}
+.surveyQuestions .clearfix{margin: 0 10px; height: auto;}
+.headline{margin-left:40px;}
+.surveyQuestions .biaoti{font-size: 24px; color: #188db6; padding-top: 25px; line-height: 40px;}
+.surveyQuestions .biaoti span{font-size: 16px; color: #333333; padding-left: 25px;}
+.surveyQuestions  p{font-size: 13px; color: #666; line-height: 25px;}
+.surveyQuestions .title{ height: auto; line-height: 30px;}
+.surveyQuestions{width: 100%; height: auto; overflow: hidden;}
+.surveyQuestions li label {font-size: 14px;color: #666; }
+.surveyQuestions .titleWrap .title {float: left;height:auto;font-weight: 700;}
+.surveyQuestions .titleWrap {line-height: 25px;padding-left: 33px;height: 25px;}
+.surveyQuestions .choices {padding: 5px 0 5px 54px;}
+.surveyQuestions .choices label{ display: block; height: 25px;}
+.surveyQuestions .emptyWarn {display: none;}
+.surveyQuestions li {border-bottom: 1px dotted #ccc;padding: 10px 0px;line-height: 25px; }
+.Result{width: 904px; height: 900px; background: #fff; border: 1px solid #eaeaea; float:right ;}
+.proHeader {width: 100%; height: 50px; background: #f4f4f4;}
+.proHeader  h3{line-height:50px; font-size:20px; margin-left: 30px; font-weight:normal;color: #666666;}
+.proHeader  h3 a{float:right; font-size:14px; color: #e74a4a;}
+.riskType{width: 100%; height:74px;margin-top:74px;}
+.riskType ul li{float: left; color: #999999;  font-size: 13px;}
+.riskType .Type{padding-left: 274px;}
+.riskType .Type span{padding-left: 16px; font-size: 24px; color: #333;}
+.riskType .Num{padding-left: 77px;}
+.riskType .Num span{padding-left: 16px; font-size: 24px; color: #333;}
+.progress{width: 630px; height: 10px; background: #F5F5F5; border-radius: 5px;}
+.number {width: 630px; height: 10px;  }
+.number ul li{float: left;width:12px; height: 10px;  }
+.gradient{width: 0; height: 10px; background: linear-gradient(to right, green, red);  border-radius: 5px; }
+/*弹出层*/
+.alert_winBox{z-index:9999; width:646px;height:328px;position: fixed;left: 50%; border-radius: 5px; margin-left: -323px;top: 50%;margin-top: -184px; background:#fff;background-size: 100%;}
+.alert_winBox .cha {width: 22px; height: 22px; float: right; padding-right: 10px; padding-top: 10px;}
+.alert_winBox .headLine h3{font-size: 24px; color: #333333;text-align: center; padding-top: 60px;}
+.alert_winBox .headLine p{width: 474px; font-size: 14px; color:#333; line-height: 30px; margin:0 auto;}
+.alert_winBox .GoBtn{width:130px; height: 38px; line-height: 38px;display: block; border-radius: 5px; color: #fff;text-align: center;margin-top: 45px; text-shadow: 0 -1px 0 rgba(0,0,0,.25);vertical-align: middle;cursor: pointer;font-size: 14px; background: -webkit-linear-gradient(#ff8400,#e7561c);background: linear-gradient(#ff8400,#e7561c);background-repeat: repeat-x;border-width: 0 1px 1px;border-color: #bbb;border-style: solid;border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);border-color: #e6e6e6 #e6e6e6 #bfbfbf;border-bottom-color: #A6A6A6;background-color: #ff8400;}
+.alert_winBox .GoBtn a{color: #fff;}
+/*风险评估*/
+.btn_stateTip .stateTip, .btns { font-size: 12px; border-radius: 5px; }
+.btns, .btnsp, .form_checkbox a { display: inline-block; }
+.btns { padding: 3px 20px; margin-bottom: 0px; line-height: 20px; color: rgb(255, 255, 255); text-align: center; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25); vertical-align: middle; cursor: pointer; background: rgb(255, 132, 0) linear-gradient(rgb(255, 132, 0), rgb(231, 86, 28)) repeat-x scroll 0% 0%; border-width: 0px 1px 1px; border-style: solid; border-color: rgb(230, 230, 230) rgb(230, 230, 230) rgb(166, 166, 166); font-weight: 700; }
+.btns:hover { background: rgb(255, 187, 1) linear-gradient(rgb(255, 156, 0), rgb(255, 187, 1)) repeat scroll 0% 0%; }
+.btn-large, .btn_large { padding: 5px 30px; font-size: 14px; }
+.form_radio { float: left; margin-right: 10px; }
+.form_radio input { display: none; }
+.icon, .iconV2 { display: inline-block; background-repeat: no-repeat; vertical-align: middle; background-position: 100px 100px; }
+.icon { background-image: url(../icon.ab8a0364.png);}
+.minusCircleIcon { background-position: -60px -161px; height: 13px; width: 13px; }
+.resultInfo .first-table tr:nth-of-type(2n) { background: rgb(250, 250, 250) none repeat scroll 0% 0%; }
+.ui-helper-clearfix::after, .ui-helper-clearfix::before { content: ""; display: table; border-collapse: collapse; }
+.ui-helper-clearfix::after { clear: both; }
+.surveyQuestions { width: 100%; margin-top: 20px; }
+.surveyQuestions li { width: 100%; padding: 5px 0px; }
+.surveyQuestions .titleWrap { line-height: 25px; padding-left: 33px; height: 25px; padding-bottom: 5px; }
+.surveyQuestions .titleWrap .title { float: left;  font-weight: 700; }
+.surveyQuestions .titleWrap .emptyWarn { float: right; margin-right: 20px; color: red; display: none; }
+.riskEvalution .warnBg { background: rgb(249, 240, 236) none repeat scroll 0% 0%; }
+.riskEvalution .warnBg .emptyWarn { display: inline; }
+.surveyQuestions .titleWrap .emptyWarn .icon { margin-right: 5px; }
+.surveyQuestions .choices { padding: 5px 0px 5px 54px; }
+.surveyQuestions .choices .form_radio { margin-right: 40px; height: 20px; }
+.surveyQuestions .verticalList .form_radio { padding-bottom: 5px; width: 100%; }
+.riskEvalution .submitBtn { margin-top: 40px; text-align: center; }
+.contentWrapper { width: 100%; margin: 20px 200px 40px 200px; min-height: 420px; }
+.form_radio input { display: inline;}
+body { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.riskEvalution { width: 960px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; padding-bottom: 20px; }
+.topbg { background: transparent url('rist_top.4f910ebb.jpg') no-repeat scroll 0% 0%; height: 150px; width: 960px; position: relative; }
+.topbg .remain-tips { position: absolute; left: 300px; top: 60px; font-size: 14px; font-weight: 700; }
+.topbg .remain-desc { display: inline-block; position: absolute; left: 40px; top: 90px; font-size: 13px; color: rgb(102, 102, 102); width: 614px; }
+.surveyQuestions { margin-top: 20px; padding: 0px 20px; width: auto; border: 1px solid #dedede;}
+.surveyQuestions li { border-bottom: 1px dashed rgb(204, 204, 204); padding: 10px 0px; }
+.surveyQuestions li label { font-size: 14px; color: rgb(102, 102, 102); }
+.progress-bar { width: 550px; height: 10px; margin: 0px auto; background: transparent url(/Style/M/images/survey1.png) no-repeat scroll 0% 0%;background-size:100% 100% ; position: relative; border-radius: 10px; overflow: hidden; }
+.progress-bar-rate { width: 0px; height: 100%; background: rgb(231, 231, 231) none repeat scroll 0% 0%; position: absolute; right: 0px; top: 0px; }
+.progress-bar-rate img{z-index:9999; width:10px;height:10px;position: relative;}
+.progress-bar-division { position: absolute;top:0px;left: 0px; width: 100%; height: 100%; }
+.progress-bar-line { width: 0px; height: 9.6px; margin: 0.2px 0px 0.2px 128.4px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; float: left; }
+.investment-capacity { width: 588px; height: 17px; margin: 10px auto 30px; }
+.investment-capacity .score { color: rgb(153, 153, 153); font-size: 12px; margin-right: 74px; overflow: hidden; }
+.investment-capacity .score:first-child { margin-right: 124px; margin-left: 11px;}
+.investment-capacity .score:nth-child(6) { margin-right: 0px; }
+.investment-capacity .score:last-child { margin-right: 0px; }
+.prompt{padding: 0 68px; margin-top: 74px;}
+.prompt{font-size: 14px; color: #333; line-height: 25px;}
+#hy_right .dw_list .dw_p3 .dw_tips {z-index: 1000; position: absolute;top: 42px;right: 24px;border: 1px solid #c7bf93; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; padding: 6px 8px; min-width: 0px; max-width: 200px;width: 200px;height: 40px; color: #000; background-color: #fff9c9;}
+#hy_right .dw_list .dw_p3 .dw_tips .dw_tips2 {font: 12px/16px arial,helvetica,sans-serif;}
+#hy_right .dw_list .dw_p3 .dw_tips .dw_tips3 {margin-top: 0; margin-left: 40px; position: absolute;bottom: 100%;left: 70%;width: 9px;height: 6px; background: url(/Style/M/images/tip-yellow.gif) no-repeat;}
+#hy_right .dw_list .dw_p3 .dw_tips .dw_tips5 {cursor: pointer;position: absolute;bottom: 79%;left: 96%;width: 15px;height: 15px;background: url(/Style/M/images/dwtipkff.gif) no-repeat;}
+.bgDiv{width: 100%;height: 100%; position: fixed; left: 0;top: 0;filter: alpha(opacity=50);opacity: 0.5;z-index: 2999; background: #000;}
+
