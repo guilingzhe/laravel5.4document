@@ -43,7 +43,7 @@ class ChongzhiController extends Controller {
 
     public function chongzhi()
     {
-        print_r($_COOKIE);
+        // print_r($_COOKIE);
         $charModel = D('recharge');
         $user_id = I('cookie.user_id');
         $charlist = $charModel->where('user_id='."$user_id")->select();
