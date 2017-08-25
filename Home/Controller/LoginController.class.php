@@ -10,34 +10,39 @@ class LoginController extends Controller{
 			exit;
 		}
 		$name = I('post.username');
-		$pwd =  md5(I('post.password').C('SALT'));
-		$realpwd = D('user')->where("name",$name)->getField('password');
-		// print_r($realpwd);
+		$pwd = md5($_POST['password'].C('SALT'));
+		$data['name'] = $name;
+		$realpwd = D('user')->where($data)->getField('password');
+		// $realpwd = $realpwd->password;
+		dump($realpwd);
+		echo "<hr>";
+		print_r($pwd);
 		if($pwd === $realpwd){
 			setcookie('name',$name);
 			setcookie('pwd',md5($name.C('SALT')));
-			$this->success('登录成功','Home/Index/index');
+			$this->success('登录成功','/Home/Index/index');
 		}else{
-			
-			$this->error('用户名或密码错误');
+			echo 'error';
+			// $this->error('用户名或密码错误');
 		}
 	}
 	public function register(){
-
+		$data['name'] = $_POST['usernamesignup'];
+		$res = D('user')->where($data)->select();	
+		if($res){
+			$this->error('用户名已存在');
+		}	
 		$email = $_POST['emailsignup'];
 		$yzm = $_POST['yzm'];
-		/*echo $email;
-		echo $yzm;
-		echo "<hr>";
-		echo $_SESSION[$email];*/
 		if($yzm == $_SESSION[$email]){
 			$data = D('user');
 			$data->name = $_POST['usernamesignup'];
 			$data->email = $_POST['emailsignup'];
+			print_r($_POST['passwordsignup']);
 			$data->password = md5($_POST['passwordsignup'].C('SALT'));
 			$data->add();
 			// $data->save();
-			$this->success('注册成功','/Home/Login/login',3);
+			$this->success('注册成功','/Home/Login/login',5);
 		}else{
 			$this->error('验证码错误');
 		}
@@ -68,4 +73,28 @@ class LoginController extends Controller{
 		$res = curl_exec($ch);
 		print_r($res);
 	}
+	public function checkname(){
+		$name = I('get.name');
+		$data['name'] = $name;
+		$res = D('user')->where($data)->select();
+
+		if($res){
+			$this->ajaxReturn(false);
+		}else{
+			$this->ajaxReturn(true);
+		}
+	}
+
+	public function checkemail(){
+		$email = I('get.email');
+		$data['email'] = $email;
+		$res = D('user')->where($data)->select();
+		if($res){
+			$this->ajaxReturn(false);
+		}else{
+			$this->ajaxReturn(true);
+		}
+	}
+
+
 }
