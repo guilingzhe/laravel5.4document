@@ -26,13 +26,14 @@ class LoginController extends Controller{
 			// $this->error('用户名或密码错误');
 		}
 	}
-	public function register(){		
+	public function register(){
+		$data['name'] = $_POST['usernamesignup'];
+		$res = D('user')->where($data)->select();	
+		if($res){
+			$this->error('用户名已存在');
+		}	
 		$email = $_POST['emailsignup'];
 		$yzm = $_POST['yzm'];
-		/*echo $email;
-		echo $yzm;
-		echo "<hr>";
-		echo $_SESSION[$email];*/
 		if($yzm == $_SESSION[$email]){
 			$data = D('user');
 			$data->name = $_POST['usernamesignup'];
@@ -72,7 +73,28 @@ class LoginController extends Controller{
 		$res = curl_exec($ch);
 		print_r($res);
 	}
-	public function check(){
-		
+	public function checkname(){
+		$name = I('get.name');
+		$data['name'] = $name;
+		$res = D('user')->where($data)->select();
+
+		if($res){
+			$this->ajaxReturn(false);
+		}else{
+			$this->ajaxReturn(true);
+		}
 	}
+
+	public function checkemail(){
+		$email = I('get.email');
+		$data['email'] = $email;
+		$res = D('user')->where($data)->select();
+		if($res){
+			$this->ajaxReturn(false);
+		}else{
+			$this->ajaxReturn(true);
+		}
+	}
+
+
 }

@@ -63,11 +63,11 @@
                         <div id="register" class="animate form">
                             <form  action="{:U('Home/Login/register')}" autocomplete="on" method="post" onkeydown="if(event.keyCode==13)return false;"> 
                                 <h1>立即注册</h1> 
-                                <p> 
+                                <p id="first"> 
                                     <label for="usernamesignup" class="uname" >请输入用户名</label>
                                     <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
                                 </p>
-                                <p> 
+                                <p id="second"> 
                                     <label for="emailsignup" class="youmail"  >请输入邮箱</label>
                                     <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
                                 </p>
@@ -138,6 +138,64 @@
 
     email.addEventListener('click',send,false);
     email.addEventListener('click',time,false);
+
+
+    usernamesignup.onblur = function(){
+        var name = this.value;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){ 
+            if(this.readyState == 4){
+                if(this.responseText == 'false'){
+                var lab = document.getElementById('first');
+                var cha = document.createElement('label');
+                cha.style.color = 'red';
+                cha.innerHTML = '用户名已存在';
+                lab.appendChild(cha);
+                }              
+            }
+        }
+        var url = "http://p2p.com/Home/Login/checkname?name="+ name;
+        xhr.open('get',url,true);
+        xhr.send(null);
+    }
+    usernamesignup.onfocus = function(){
+        var lab = document.getElementById('first');
+        var childs = lab.childNodes; 
+        for(var i = 0; i < childs.length; i++) {
+            if(i === 5){
+               lab.removeChild(childs[5]); 
+            }
+        }  
+    }
+
+
+    emailsignup.onblur = function(){
+        var name = this.value;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){ 
+            if(this.readyState == 4){
+                if(this.responseText == 'false'){
+                var lab = document.getElementById('second');
+                var cha = document.createElement('label');
+                cha.style.color = 'red';
+                cha.innerHTML = '邮箱已使用';
+                lab.appendChild(cha);
+                }              
+            }
+        }
+        var url = "http://p2p.com/Home/Login/checkemail?email="+ name;
+        xhr.open('get',url,true);
+        xhr.send(null);
+    }
+    emailsignup.onfocus = function(){
+        var lab = document.getElementById('second');
+        var childs = lab.childNodes; 
+        for(var i = 0; i < childs.length; i++) {
+            if(i === 5){
+               lab.removeChild(childs[5]); 
+            }
+        }  
+    }
 
 
 </script>
