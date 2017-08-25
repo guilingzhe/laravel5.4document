@@ -23,7 +23,7 @@ class ChongzhiController extends Controller {
                 "user_id" => "$user_id",
                 "balance" => "$balance"
             ];
-            // print_r($data);exit; 
+            // print_r($data);exit;
             if(!$char->validate($rules)->create()) {
                 echo $char->getError(); exit;
             }else {
