@@ -11,17 +11,19 @@ class LoginController extends Controller{
 		}
 		$name = I('post.username');
 		$pwd =  md5(I('post.password').C('SALT'));
-		$realpwd = D('user')->where("name = $name")->getField('password');
-		print_r($realpwd);
+		$realpwd = D('user')->where("name",$name)->getField('password');
+		// print_r($realpwd);
 		if($pwd === $realpwd){
 			setcookie('name',$name);
 			setcookie('pwd',md5($name.C('SALT')));
 			$this->success('登录成功','Home/Index/index');
 		}else{
+			
 			$this->error('用户名或密码错误');
 		}
 	}
 	public function register(){
+
 		$email = $_POST['emailsignup'];
 		$yzm = $_POST['yzm'];
 		/*echo $email;
@@ -35,7 +37,7 @@ class LoginController extends Controller{
 			$data->password = md5($_POST['passwordsignup'].C('SALT'));
 			$data->add();
 			// $data->save();
-			$this->success('注册成功','Home/Login/login',3);
+			$this->success('注册成功','/Home/Login/login',3);
 		}else{
 			$this->error('验证码错误');
 		}
