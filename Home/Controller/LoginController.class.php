@@ -13,17 +13,13 @@ class LoginController extends Controller{
 		$pwd = md5($_POST['password'].C('SALT'));
 		$data['name'] = $name;
 		$realpwd = D('user')->where($data)->getField('password');
-		// $realpwd = $realpwd->password;
-		dump($realpwd);
-		echo "<hr>";
-		print_r($pwd);
 		if($pwd === $realpwd){
-			setcookie('name',$name);
-			setcookie('pwd',md5($name.C('SALT')));
+			$res=setcookie('name',$name,time()+3600*24);
+			var_dump($res);
 			$this->success('登录成功','/Home/Index/index');
-		}else{
-			echo 'error';
-			// $this->error('用户名或密码错误');
+			setcookie('pwd',md5($name.C('SALT')),time()+3600*24);
+		}else{		
+			$this->error('用户名或密码错误');
 		}
 	}
 	public function register(){
@@ -94,6 +90,9 @@ class LoginController extends Controller{
 		}else{
 			$this->ajaxReturn(true);
 		}
+	}
+	public function checkcookie(){
+		var_dump($_COOKIE);
 	}
 
 
