@@ -324,19 +324,15 @@
 
 	<div class="my_zh"></div>
 
-<div class="defu nav_cur"> <a href="/index.html">首页</a> </div>
+<div class="defu nav_cur"> <a href="{:U('Home/Index/index')}">首页</a> </div>
 
-<div class="defu nav_cur"><a href="/freestock/index" target="_blank">热销活动</a></div>
+<div class="defu nav_cur"><a href="{:U('Home/Rexiao/index')}" target="_blank">热销活动</a></div>
 
-<div  class="defu nav_cur" class="posbox"> <a  id="invest" href="/invest/index">我要出借</a></div>
+<div  class="defu nav_cur" class="posbox"> <a  id="invest" href="{:U('Home/Chujie/index')}">我要出借</a></div>
 
-<div  class="defu nav_cur"><a id="borrow" href="/capital/index">我要借款</a></div>
-
-<div class="defu nav_cur"> <a  id="xinshou"  href="/Help/novice" target="_blank">新手指引</a> </div>
+<div  class="defu nav_cur"><a id="borrow" href="{:U('Home/JiekuanUser/index')}">我要借款</a></div>
 
 <div id="anvlfteb">
-
-<div selec="youhui" class="posbox nav_cur"><a  id="jianjie" href="/aboutus/jianjie.html">信息披露</a> <i></i></div>
 
 <div id="seledbox" class="posiabox" style="display: none; left: 1px;"></div>
 
@@ -370,43 +366,14 @@ $(function(){
 
 		anvjson={
 
-			bbs:'<a href="/invest/index">出借产品</a>'
+      bbs:'<a href="/invest/index">出借产品</a>' ,
 
-				/*+'<a href="/invest/index?type=search&&stock_type=2">月月盈</a>'+
+      post:'<a href="/Help/novice">新手指引</a>',
+      youhui:'<a href="/aboutus/jianjie.html">公司简介</a>'+
 
-				'<a href="/invest/index?type=search&&stock_type=4">打新宝</a>'+
+      '<a href="/aboutus/licheng.html">发展历程</a>'+
 
-                '<a href="/debt/index">债权转让</a>'*/
-
-				,
-
-        	news:'<a href="/daystock/index">按天融资</a>'+
-
-				'<a href="/Monthstock/index">按月融资</a>'+
-
-				'<a href="/Imtrader/index">我是操盘手</a>',
-
-        	 post:'<a href="/Help/novice">新手指引</a>',
-
-			youhui:'<a href="/aboutus/jianjie.html">公司简介</a>'+
-
-			'<a href="/aboutus/anquan.html">安全保障</a>'+
-
-			'<a href="/aboutus/tdjs.html">团队介绍</a>'+
-
-			'<a href="/aboutus/zizhi.html">证件资质</a>'+
-
-			'<a href="/aboutus/licheng.html">发展历程</a>'+
-
-			'<a href="/aboutus/lianxi.html">联系我们</a>'+
-
-			'<a href="/aboutus/yingcai.html">诚聘英才</a>'+
-
-			'<a href="/aboutus/partner.html">友情链接</a>'+
-
-			'<a href="/help/platform_data">平台数据</a>'
-
-		};
+    };
 
 		 
 
@@ -701,58 +668,40 @@ $(window).scroll(function(){
 		<div class="user_list" > <a class="dw_top" href="/member" style=" background:#e74a4a; border:0px; color:#fff; font-size:18px;">帐户总览</a>
   <div id="dw_m_left">
   
-    <div class="dv_r_5" > <a class="bt3"><span></span>资金管理</a> </div>
+     <div class="dv_r_5" > <a class="bt3"><span></span>资金管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/member/capital#fragment-2">资金流水</a></li>     
-        <li><a href="/member/charge#fragment-1">我要充值</a></li>
-        <li><a href="/member/withdraw#fragment-1">我要提现</a></li>
-        <li><a href="/member/bank#fragment-1">银行帐户</a></li>
-        <li><a href="/member/myinterestrate#fragment-1">我的加息券<img src="/Style/images/quan.gif" style="display: inline-block;height:16px;vertical-align: middle;margin: -2px 0 0 2px;"></a></li>
+        <li><a href="{:U('Home/Zijin/index')}">资金流水</a></li>     
+        <li><a href="{:U('Home/Chongzhi/index')}">我要充值</a></li>
+        <li><a href="#">我要提现</a></li>      
       </ul>
     </div>
     
     <div class="dv_r_5"> <a class="bt5"><span></span>理财管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/member/tendout#fragment-3">投标记录</a></li>
+        <li><a href="{:U('Home/Toubiao/index')}">投标记录</a></li>
         <!-- <li><a href="/member/current#fragment-1">活期理财</a></li> -->
-		<li><a href="/member/borrowin#fragment-3">借款记录</a></li>
-<!-- 		<li><a href="/member/debt#fragment-1">债权转让</a></li> 
+    <li><a href="{:U('Home/Jiekuan/index')}">借款记录</a></li>
+<!--    <li><a href="/member/debt#fragment-1">债权转让</a></li> 
  -->        <!--<li  class="last"><a href="/member/auto/index.html">自动投标</a></li>-->
       </ul>
     </div>
-	
   
-  <!---
-	<div class="dv_r_5"> <a class="bt4"><span></span>股票配资</a> </div>
+  <div class="dv_r_5" > <a class="bt7"><span></span>邀请好友</a></div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/member/daystock#fragment-1">按天配资</a></li>
-        <li><a href="/member/Monthstock#fragment-1">按月配资</a></li>
-        <li><a href="/member/Imtrader#fragment-1">我是操盘手</a></li>
-        <li><a href="/member/Freestock#fragment-1">免费体验</a></li>
+        <li><a href="#">邀请好友<img src="/public/admin/images/mac-xin.gif" style="display: inline-block;height:16px;vertical-align: middle;margin: -2px 0 0 2px;"></a></a></li>
+        <li><a href="#">奖金记录</a></li>
       </ul>
     </div>
-	-->
-	<div class="dv_r_5" > <a class="bt7"><span></span>邀请好友</a></div>
-    <div class="dw_navlist">
-      <ul>
-        <li><a href="/member/promotion#fragment-1">邀请好友<img src="/public/admin/images/mac-xin.gif" style="display: inline-block;height:16px;vertical-align: middle;margin: -2px 0 0 2px;"></a></a></li>
-        <li><a href="/member/promotion#fragment-2">奖金记录</a></li>
-      </ul>
-    </div>
-	
+  
     <div class="dv_r_5" > <a class="bt6"><span></span>基本设置</a> </div>
     <div class="dw_navlist">
-		<ul>
-			<li><a href="/member/memberinfo#fragment-1">基本资料</a></li>
-			<li><a href="/member/user#fragment-1">头像与密码</a></li>
-			<li><a href="/member/verify?id=1#fragment-2">认证中心</a></li>
-	   <li><a href="/member/sign">电子签章</a></li> 
-	 
-	    	
-			<li><a href="/member/index/evaluateresult?score=&classification=&info=&answerNum=">风险承受能力评估</a></li>		</ul>
+    <ul>
+      <li><a href="#">基本资料</a></li>
+      <li><a href="{:U('Home/Touxiang/index')}">头像与密码</a></li>
+    </ul>
     </div>
   
   </div>

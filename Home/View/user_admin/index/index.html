@@ -3,8 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=9" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="/public/admin/css/css.css" />
 <link type="text/css" rel="stylesheet" href="/public/admin/css/jbox.css"/>
 <link href="/public/admin/css/Mbmber.css?2016031605" rel="stylesheet" type="text/css">
@@ -13,7 +13,7 @@
 <!-- qingfu -->
 <link type="text/css" rel="stylesheet" href="/public/admin/css/y_style.css"/> 
 <!--end -->
-	<link rel="stylesheet" type="text/css" href="/public/admin/css/kefu.css" />
+  <link rel="stylesheet" type="text/css" href="/public/admin/css/kefu.css" />
 <link rel="stylesheet" type="text/css" href="/public/admin/css/headerandfooter.css">
 <script language=javascript type="text/javascript" src="/public/admin/js/jquery.js"></script>
 <script language=javascript src="/public/admin/js/jquery.jBox.min.js" type=text/javascript></script>
@@ -25,65 +25,65 @@
 <script type="text/javascript" src="/public/admin/js/utils.js"></script>
 <script type="text/javascript" src="/public/admin/js/jquery.artDialog.source.js?skin=aero"></script>
 <script type="text/javascript">
-	function makevar(v){
-		var d={};
-		for(i in v){
-			var id = v[i];
-			d[id] = $("#"+id).val();
-			if(!d[id]) d[id] = $("input[name='"+id+"']:checked").val();
-		}
-		return d;
-	}
-	function ajaxGetData(url,targetid,data){
-			if(!url) return;
-			data = data||{};
-			var thtml = '<div class="loding"><img src="/public/admin/images/008.gif"align="absmiddle" /></div>';
-			$("#"+targetid).html(thtml);
-			
-			$.ajax({
-				url: url,
-				data: data,
-				timeout: 10000,
-				cache: true,
-				type: "get",
-				dataType: "json",
-				success: function (d, s, r) {
-					if(d) $("#"+targetid).html(d.html);
-				},
-				error: '',
-				complete: ''
-			});
-		
-	}
-	var currentUrl = window.location.href.toLowerCase();
-	$(document).ready(function() {
-		$('#rotate > ul').tabs();/* 第一个TAB渐隐渐现（{ fx: { opacity: 'toggle' } }），第二个TAB是变换时间（'rotate', 2000） */
-		$('.dw_navlist li a').click(function() { // 绑定单击事件
-			var nowurl = $(this).attr('href');
-			var vid = nowurl.split("#");
-			try{
-				if(currentUrl.indexOf(vid[0]) != -1 ){
-					$('#rotate > ul').tabs('select', "#"+vid[1]); // 切换到第三个选项卡标签
-					var geturl= $('#rotate > ul li a [href="#'+vid[1]+'"]').attr("ajax_href");
-					ajaxGetData(geturl,vid[1]);
-					return false;
-				}
-			}catch(ex){};
-				return true;
-		});
-		
-		$('.ajaxdata a').click(function(){
-			var geturl = $(this).attr('ajax_href');
-			var hasget = $(this).attr('get')||0;
-			var nowurl = $(this).attr('href');
-			var vid = nowurl.split("#");
-			if(hasget!=1) ajaxGetData(geturl,vid[1]);
-			$(this).attr('get','1');
-			$('html,body').animate({scorllTop:0},1000);
-			return false;
-		})
-	});
-	//ui
+  function makevar(v){
+    var d={};
+    for(i in v){
+      var id = v[i];
+      d[id] = $("#"+id).val();
+      if(!d[id]) d[id] = $("input[name='"+id+"']:checked").val();
+    }
+    return d;
+  }
+  function ajaxGetData(url,targetid,data){
+      if(!url) return;
+      data = data||{};
+      var thtml = '<div class="loding"><img src="/public/admin/images/008.gif"align="absmiddle" /></div>';
+      $("#"+targetid).html(thtml);
+      
+      $.ajax({
+        url: url,
+        data: data,
+        timeout: 10000,
+        cache: true,
+        type: "get",
+        dataType: "json",
+        success: function (d, s, r) {
+          if(d) $("#"+targetid).html(d.html);
+        },
+        error: '',
+        complete: ''
+      });
+    
+  }
+  var currentUrl = window.location.href.toLowerCase();
+  $(document).ready(function() {
+    $('#rotate > ul').tabs();/* 第一个TAB渐隐渐现（{ fx: { opacity: 'toggle' } }），第二个TAB是变换时间（'rotate', 2000） */
+    $('.dw_navlist li a').click(function() { // 绑定单击事件
+      var nowurl = $(this).attr('href');
+      var vid = nowurl.split("#");
+      try{
+        if(currentUrl.indexOf(vid[0]) != -1 ){
+          $('#rotate > ul').tabs('select', "#"+vid[1]); // 切换到第三个选项卡标签
+          var geturl= $('#rotate > ul li a [href="#'+vid[1]+'"]').attr("ajax_href");
+          ajaxGetData(geturl,vid[1]);
+          return false;
+        }
+      }catch(ex){};
+        return true;
+    });
+    
+    $('.ajaxdata a').click(function(){
+      var geturl = $(this).attr('ajax_href');
+      var hasget = $(this).attr('get')||0;
+      var nowurl = $(this).attr('href');
+      var vid = nowurl.split("#");
+      if(hasget!=1) ajaxGetData(geturl,vid[1]);
+      $(this).attr('get','1');
+      $('html,body').animate({scorllTop:0},1000);
+      return false;
+    })
+  });
+  //ui
     function addBookmark(title, url) {
         if (window.sidebar) {
             window.sidebar.addPanel(title, url, "");
@@ -167,17 +167,17 @@
 
 <script>
 
-	$(function(){
+  $(function(){
 
-		$(".cha").click(function(){ 
+    $(".cha").click(function(){ 
 
-			$('.alert_winBox').hide();
+      $('.alert_winBox').hide();
 
-			$('.bgDiv').hide();
+      $('.bgDiv').hide();
 
-		});
+    });
 
-	});
+  });
 
 </script>
 
@@ -223,7 +223,7 @@
 
 .zixunbox .over_icon{
 
-	background-image:url("/public/admin/images/over_icon.png");
+  background-image:url("/public/admin/images/over_icon.png");
 
 
 
@@ -245,9 +245,9 @@
 
     background-image: url("/public/admin/images/qq_icon.png");
 
-	background-repeat:no-repeat;
+  background-repeat:no-repeat;
 
-	background-position:0px center;
+  background-position:0px center;
 
     color: #858585;
 
@@ -265,9 +265,9 @@
 
     background: url("/public/admin/images/dianh.png");
 
-	background-repeat:no-repeat;
+  background-repeat:no-repeat;
 
-	background-position:40px center;
+  background-position:40px center;
 
     color: #2382ba;
 
@@ -366,9 +366,9 @@
 
 <div class="top">
 
-	<div class="top_main">
+  <div class="top_main">
 
-		<span class="top_l"><img style="vertical-align: middle;" src="/public/admin/images/phone.png" width="15" height="15">客服热线：400-047-5588</span>
+    <span class="top_l"><img style="vertical-align: middle;" src="/public/admin/images/phone.png" width="15" height="15">客服热线：400-047-5588</span>
 
         <span class="top_m">
 
@@ -400,13 +400,13 @@
 
         </span>
 
-	</div>        
+  </div>        
 
 </div>
 
 <script type="text/javascript">
 
-	//顶部微信
+  //顶部微信
 
     $(".top_main .top_m").hover(function(){
 
@@ -430,9 +430,9 @@
 
     <div class="nav">
 
-	<div class="nav_main">
+  <div class="nav_main">
 
-    	<div class="logo"><a href="/" target="_blank"><p><img alt="" style="height: 65px; width: 309px; float: none; margin: 0px;" src="/public/admin/images/20170307223459.jpg" /></p></a></div>
+      <div class="logo"><a href="/" target="_blank"><p><img alt="" style="height: 65px; width: 309px; float: none; margin: 0px;" src="/public/admin/images/20170307223459.jpg" /></p></a></div>
 
 <div class="nav_list">
 
@@ -440,15 +440,15 @@
 
     <div id="topnanv">
 
-	<div class="my_zh"></div>
+  <div class="my_zh"></div>
 
-<div class="defu nav_cur"> <a href="/index.html">首页</a> </div>
+<div class="defu nav_cur"> <a href="{:U('Home/Index/index')}">首页</a> </div>
 
-<div class="defu nav_cur"><a href="/freestock/index" target="_blank">热销活动</a></div>
+<div class="defu nav_cur"><a href="{:U('Home/Rexiao/index')}" target="_blank">热销活动</a></div>
 
-<div  class="defu nav_cur" class="posbox"> <a  id="invest" href="/invest/index">我要出借</a></div>
+<div  class="defu nav_cur" class="posbox"> <a  id="invest" href="{:U('Home/Chujie/index')}">我要出借</a></div>
 
-<div  class="defu nav_cur"><a id="borrow" href="/capital/index">我要借款</a></div>
+<div  class="defu nav_cur"><a id="borrow" href="{:U('Home/JiekuanUser/index')}">我要借款</a></div>
 
 <div id="anvlfteb">
 
@@ -476,44 +476,25 @@
 
 $(function(){
 
-	var $anvlfteb=$('#anvlfteb'),
+  var $anvlfteb=$('#anvlfteb'),
 
-		$posbox=$anvlfteb.find('div.posbox'),
+    $posbox=$anvlfteb.find('div.posbox'),
 
-		$seledbox=$("#seledbox"),
+    $seledbox=$("#seledbox"),
 
-		anvjson={
+    anvjson={
 
-			bbs:'<a href="/invest/index">出借产品</a>'
+      bbs:'<a href="/invest/index">出借产品</a>' ,
 
-				/*+'<a href="/invest/index?type=search&&stock_type=2">月月盈</a>'+
+      post:'<a href="/Help/novice">新手指引</a>',
+      youhui:'<a href="/aboutus/jianjie.html">公司简介</a>'+
 
-				'<a href="/invest/index?type=search&&stock_type=4">打新宝</a>'+
+      '<a href="/aboutus/licheng.html">发展历程</a>'+
 
-                '<a href="/debt/index">债权转让</a>'*/
+    };
 
-				,
-
-        	news:'<a href="/daystock/index">按天融资</a>'+
-
-				'<a href="/Monthstock/index">按月融资</a>'+
-
-				'<a href="/Imtrader/index">我是操盘手</a>',
-
-        	 post:'<a href="/Help/novice">新手指引</a>',
-
-			youhui:'<a href="/aboutus/jianjie.html">公司简介</a>'+
-
-			'<a href="/aboutus/licheng.html">发展历程</a>'+
-
-			'<a href="/aboutus/lianxi.html">联系我们</a>'+
-
-			'<a href="/help/platform_data">平台数据</a>'
-
-		};
-
-		 
-		$posbox.mouseover(function(){
+     
+    $posbox.mouseover(function(){
 
            var i=$(this).index();
 
@@ -541,13 +522,13 @@ $(function(){
 
         });
 
-		$anvlfteb.mouseleave(function(){
+    $anvlfteb.mouseleave(function(){
 
-			$seledbox.hide();
+      $seledbox.hide();
 
-			$posbox.removeClass("anvh");
+      $posbox.removeClass("anvh");
 
-		});
+    });
 
         var href = window.location.href;
 
@@ -587,15 +568,15 @@ $(function(){
 
 $(document).ready(function() {
 
- 	$(".footer .footerC .guanzhu span a").hover(function() {
+  $(".footer .footerC .guanzhu span a").hover(function() {
 
- 		$(this).children('img').show()
+    $(this).children('img').show()
 
- 	}, function() {
+  }, function() {
 
- 		$(this).children('img').hide()
+    $(this).children('img').hide()
 
- 	});
+  });
 
 
 
@@ -635,7 +616,7 @@ $(document).ready(function() {
 
     }
 
-	$(".header .main .fr dl dd").css("float","none");
+  $(".header .main .fr dl dd").css("float","none");
 
 </script>
 
@@ -643,41 +624,41 @@ $(document).ready(function() {
 
 $(function(){
 
-	$(".kefu").click(function(){
+  $(".kefu").click(function(){
 
-		$(".zixunbox").fadeIn("slow");
+    $(".zixunbox").fadeIn("slow");
 
-		$(".body_box").fadeIn("slow");
+    $(".body_box").fadeIn("slow");
 
-	});
+  });
 
-	$(".liuyan").click(function(){
+  $(".liuyan").click(function(){
 
-		$(".liuy_box").fadeIn("slow");
+    $(".liuy_box").fadeIn("slow");
 
-		$(".body_box").fadeIn("slow");
+    $(".body_box").fadeIn("slow");
 
-	});
+  });
 
-	
+  
 
-	$(".over_icon").click(function(){
+  $(".over_icon").click(function(){
 
-		$(".zixunbox").fadeOut("slow");
+    $(".zixunbox").fadeOut("slow");
 
-		$(".body_box").fadeOut("slow");
+    $(".body_box").fadeOut("slow");
 
-		$(".liuy_box").fadeOut("slow");
+    $(".liuy_box").fadeOut("slow");
 
-	});
+  });
 
-	
+  
 
-	$(".over_cionn").click(function(){
+  $(".over_cionn").click(function(){
 
-		$(".video").fadeOut("slow");
+    $(".video").fadeOut("slow");
 
-	});
+  });
 
 });
 
@@ -772,7 +753,7 @@ $(window).scroll(function(){
 
 <!--页眉end-->
 
-	 <!--风险能力评估弹出层  （签章 and $sign eq 'yes'签章)暂时屏蔽   B-->
+   <!--风险能力评估弹出层  （签章 and $sign eq 'yes'签章)暂时屏蔽   B-->
 
         <!--风险能力评估弹出层 E-->
 
@@ -784,43 +765,42 @@ $(window).scroll(function(){
     <div class="dv_r_5" > <a class="bt3"><span></span>资金管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/member/capital#fragment-2">资金流水</a></li>     
-        <li><a href="/member/charge#fragment-1">我要充值</a></li>
-        <li><a href="/member/withdraw#fragment-1">我要提现</a></li>
-        <li><a href="/member/bank#fragment-1">银行帐户</a></li>
-        
+        <li><a href="{:U('Home/Zijin/index')}">资金流水</a></li>     
+        <li><a href="{:U('Home/Chongzhi/index')}">我要充值</a></li>
+        <li><a href="#">我要提现</a></li>      
       </ul>
     </div>
     
     <div class="dv_r_5"> <a class="bt5"><span></span>理财管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/member/tendout#fragment-3">投标记录</a></li>
+        <li><a href="{:U('Home/Toubiao/index')}">投标记录</a></li>
         <!-- <li><a href="/member/current#fragment-1">活期理财</a></li> -->
-		<li><a href="/member/borrowin#fragment-3">借款记录</a></li>
-<!-- 		<li><a href="/member/debt#fragment-1">债权转让</a></li> 
+    <li><a href="{:U('Home/Jiekuan/index')}">借款记录</a></li>
+<!--    <li><a href="/member/debt#fragment-1">债权转让</a></li> 
  -->        <!--<li  class="last"><a href="/member/auto/index.html">自动投标</a></li>-->
       </ul>
     </div>
-	
-	<div class="dv_r_5" > <a class="bt7"><span></span>邀请好友</a></div>
+  
+  <div class="dv_r_5" > <a class="bt7"><span></span>邀请好友</a></div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/member/promotion#fragment-1">邀请好友<img src="/public/admin/images/mac-xin.gif" style="display: inline-block;height:16px;vertical-align: middle;margin: -2px 0 0 2px;"></a></a></li>
-        <li><a href="/member/promotion#fragment-2">奖金记录</a></li>
+        <li><a href="#">邀请好友<img src="/public/admin/images/mac-xin.gif" style="display: inline-block;height:16px;vertical-align: middle;margin: -2px 0 0 2px;"></a></a></li>
+        <li><a href="#">奖金记录</a></li>
       </ul>
     </div>
-	
+  
     <div class="dv_r_5" > <a class="bt6"><span></span>基本设置</a> </div>
     <div class="dw_navlist">
-		<ul>
-			<li><a href="/member/memberinfo#fragment-1">基本资料</a></li>
-			<li><a href="/member/user#fragment-1">头像与密码</a></li>
-		</ul>
+    <ul>
+      <li><a href="#">基本资料</a></li>
+      <li><a href="{:U('Home/Touxiang/index')}">头像与密码</a></li>
+    </ul>
     </div>
   
   </div>
 </div>
+<block name="content">
 
   <div id="hy_right">
 
@@ -834,9 +814,11 @@ $(window).scroll(function(){
 
         <div style="overflow:visible">
 
-          <div class="touxiang"> <a href="/member/user#fragment-1" title="点击进行头像更换">
-
-           <img style="width: 114px; height: 114px; border: 1px solid #dedede; border-radius:4px;" alt="点击进行头像更换" src="/public/admin/images/noavatar_middle.gif"></a> </div>
+          <div class="touxiang"> 
+          <a href="{:U('Home/Touxiang/upload')}" title="点击进行头像更换">
+           <img style="width: 114px; height: 114px; border: 1px solid #dedede; border-radius:4px;" alt="点击进行头像更换" src="/public/admin/images/noavatar_middle.gif">
+           </a> 
+           </div>
 
           <div class="touxiang_right">
 
@@ -848,27 +830,7 @@ $(window).scroll(function(){
 
             <div class="dw_p3">
 
-              <div class="dw_tip">
-
-                  <div class="dw_tip2">还未设支付密码<span ></span> <a  style="color:#0099DD" href="/member/user#fragment-3">[点此设置]</a><span ></span></div>
-
-                  <div class="dw_tip3"> </div>
-
-                  <div class="dw_tip5" id="dwtipkff"> </div>
-
-                </div>
-
-                <script type="text/javascript">
-
-                $('#dwtipkff').click(function(){
-
-                $(this).parent().hide();
-
-                });
-
-                </script>                                          <a href="/member/verify#fragment-2"><img alt="手机认证通过"  style="vertical-align:middle"; title="手机认证通过" src="/public/admin/images/phone.gif"/>&nbsp;<a  href="/member/user#fragment-3"><img alt="支付密码未设置"  style="vertical-align:middle"; title="支付密码未设置" src="/public/admin/images/mima_0.gif"/></a>&nbsp;<a  href="/member/sign"> 
-
-			  </div>
+        </div>
 
           </div>
 
@@ -949,6 +911,7 @@ $(window).scroll(function(){
     <!--个人中心修改结束-->
 
       <!--后增加的banner图开始-->
+</block>
 
     <style>
 

@@ -29,6 +29,8 @@ return  array(
     'APP_AUTOLOAD_LAYER'    =>  'Controller,Model', // 自动加载的应用类库层 关闭APP_USE_NAMESPACE后有效
     'APP_AUTOLOAD_PATH'     =>  '', // 自动加载的路径 关闭APP_USE_NAMESPACE后有效
 
+    /*密码加盐*/
+    'SALT'                  =>  'SICS64',
     /* Cookie设置 */
     'COOKIE_EXPIRE'         =>  0,       // Cookie有效期
     'COOKIE_DOMAIN'         =>  '',      // Cookie有效域名
@@ -38,7 +40,7 @@ return  array(
     'COOKIE_HTTPONLY'       =>  '',      // Cookie httponly设置
 
     /* 默认设定 */
-    'DEFAULT_M_LAYER'       =>  'Model', // 默认的模型层名称
+    'DEFAULT_M_LAYER'       =>  'Model', // 默认的模型层名称,模型层可以分为Model,Logic,Service三层;
     'DEFAULT_C_LAYER'       =>  'Controller', // 默认的控制器层名称
     'DEFAULT_V_LAYER'       =>  'View', // 默认的视图层名称
     'DEFAULT_LANG'          =>  'zh-cn', // 默认语言
@@ -55,7 +57,7 @@ return  array(
     /* 数据库设置 */
     'DB_TYPE'               =>  'mysql',     // 数据库类型
     'DB_HOST'               =>  '127.0.0.1', // 服务器地址
-    'DB_NAME'               =>  'laravel54',          // 数据库名
+    'DB_NAME'               =>  'p2p',          // 数据库名
     'DB_USER'               =>  'root',      // 用户名
     'DB_PWD'                =>  '',          // 密码
     'DB_PORT'               =>  '3306',        // 端口

@@ -2,6 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class ChongzhiController extends Controller {
+
     public function charge()
     {
         $rules = array(
@@ -36,6 +37,8 @@ class ChongzhiController extends Controller {
     public function chongzhi()
     {
         $charModel = D('recharge');
+        // $user_id = I('cookie.user_id');
+        $charlist = $charModel->where('user_id')->find();
         // $charlist = $charModel->where("user_id=5")->select();
         $charlist = $charModel->select();
         // print_r($charlist);exit;
@@ -44,8 +47,20 @@ class ChongzhiController extends Controller {
         $this->display('user_admin/Chongzhi/index');
     }
 
+    //pay
+    public function pay()
+    {
+        
+    }
+
     public function test()
     {
         echo I('get.user_id');
     }
+    public function index()
+    {
+        $this->display('user_admin/chongzhi/index');
+
+    }
+
 }
