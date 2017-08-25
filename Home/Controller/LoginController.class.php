@@ -11,13 +11,14 @@ class LoginController extends Controller{
 		}
 		$name = I('post.username');
 		$pwd =  md5(I('post.password').C('SALT'));
-		$realpwd = D('user')->where("name = $name")->getField('password');
-		print_r($realpwd);
+		$realpwd = D('user')->where("name",$name)->getField('password');
+		// print_r($realpwd);
 		if($pwd === $realpwd){
 			setcookie('name',$name);
 			setcookie('pwd',md5($name.C('SALT')));
 			$this->success('登录成功','Home/Index/index');
 		}else{
+			
 			$this->error('用户名或密码错误');
 		}
 	}
