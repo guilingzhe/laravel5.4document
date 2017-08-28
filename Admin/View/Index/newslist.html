@@ -16,32 +16,28 @@
 									<tr>
 										<th>文章ID</th>
 										<th>文章标题</th>
-										<th>作者</th>
 										<th>发布时间</th>
 										<th>所属栏目</th>
 										<th>操作</th>
 									</tr>
+									<foreach name='news' item='n'>
 									<tr>
-										<td>12</td>
-										<td>清平乐村居</td>
-										<td>辛弃疾</td>
-										<td>2017年8月17日</td>
-										<td>技术</td>
+										<td>{$n['news_id']}</td>
+										<td>{$n['title']}</td>
+										<td>{$n['pubtime']|date="Y-m-d H:i:s",###}</td>
+
+										<td>{$n['sort']}</td>
+
 										<td>
-											<a href="" class="btn btn-primary btn-xs" type="button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  编辑</a>
-											<a href="" class="btn btn-warning btn-xs" type="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 删除</a>
+
+											<a href="{:U('Admin/IndexUser/newsdelete',array('news_id'=>$n['news_id']))}" class="btn btn-warning btn-xs" type="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 删除</a>
 										</td>
 									</tr>
+								</foreach>
 							</table>
 							<ul class="pagination">
-							   <li><a href="#">&laquo;首页</a></li>
-							   <li><a href="#">1</a></li>
-							   <li><a href="#">2</a></li>
-							   <li class="active"><a href="#">3</a></li>
-							   <li><a href="#">4</a></li>
-							   <li><a href="#">5</a></li>
-							   <li><a href="#">6</a></li>
-							   <li><a href="#">&raquo;尾页</a></li>
+							   <li>{$page}</li>
+
 							</ul>
 					    </div>
 						<div class="col-sm-2"></div>
@@ -50,6 +46,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 </body>
 </html>

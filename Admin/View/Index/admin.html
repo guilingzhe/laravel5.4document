@@ -8,6 +8,7 @@
 				</ol>
 				<div id="web">
 				<span><span class="glyphicon glyphicon-edit" aria-hidden="true"><strong> 管理员模块</strong></span>
+				<span><span class="glyphicon glyphicon-edit" aria-hidden="true"><strong><a href="{:U('/Admin/IndexUser/adminAdd')}"> 添加管理员</a></strong></span>
 				<hr>
 				    <div class="row">
 				    	<div class="col-sm-12">
@@ -17,17 +18,21 @@
 									<th>用户名</th>
 									<th>密码</th>
 									<th>权限</th>
-									<th>电话</th>
-									<th>邮箱</th>
+									<th>所属部门</th>
+									<th>操作</th>
+									<th></th>
 								</tr>
+								<foreach name="users" item="u">
 								<tr>
-									<td>P_001</td>
-									<td>Laoban</td>
-									<td>123456</td>
-									<td>1</td>
-									<td>13600000000</td>
-									<td>laoban@163.com</td>
+									<td>{$u.admin_user_id}</td>
+									<td>{$u.name}</td>
+									<td>{$u.password}</td>
+									<td>{$u.privilege}</td>
+									<td>{$u.department}</td>
+									<td><a href="{:U('/Admin/IndexUser/adminUpdate',array('id'=>$u['admin_user_id']))}">修改</a></td>
+									<td><a href="{:U('/Admin/IndexUser/adminDelete',array('id'=>$u['admin_user_id']))}">删除</a></td>
 								</tr>
+							</foreach>
 							</table>
 					    </div>
 					</div>
@@ -35,6 +40,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 </body>
 </html>

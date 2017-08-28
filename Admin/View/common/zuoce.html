@@ -6,26 +6,27 @@
 						<div class="panel panel-primary">
     						<div class="panel-heading">模块管理</div>
 					        <div class="list-group">
-					            <a class="list-group-item" href="admin.html">管理员模块</a>
-					            <a class="list-group-item" href="user.html">用户模块</a>
+
+					            <a class="list-group-item" href="{:U($auth['rootaddress'],1)}">{$auth['root']}</a>
+					            <a class="list-group-item" href="{:U($auth['useraddress'],1)}">{$auth['user']}</a>
+											<a class="list-group-item" href="{:U($auth['authaddress'],1)}">{$auth['auth']}</a>
 					        </div>
 						</div>
 							<div class="panel panel-primary">
     						<div class="panel-heading">账户管理</div>
 					        <div class="list-group">
-					            <a class="list-group-item" href="recharge.html">充值记录</a>
-					            <a class="list-group-item" href="bid.html">投标记录</a>
-					             <a class="list-group-item" href="loan.html">借款记录</a>
-					             
+					            <a class="list-group-item" href="{:U($auth['moneyaddress'],1)}">{$auth['money']}</a>
+					            <a class="list-group-item" href="{:U($auth['toubiaoaddress'],1)}">{$auth['toubiao']}</a>
+					             <a class="list-group-item" href="{:U($auth['jiekuanaddress'],1)}">{$auth['jiekuan']}</a>
+
 					        </div>
 						</div>
-						
+
 						<div class="panel panel-primary">
     						<div class="panel-heading">新闻管理</div>
 					        <div class="list-group">
-					            <a class="list-group-item" href="newslist.html">新闻列表</a>
-					            <a class="list-group-item" href="newsadd.html">新闻发布</a>
-					            <a class="list-group-item" href="commlist.html">评论列表</a>
+					            <a class="list-group-item" href="{:U($auth['newsaddress'],1)}">{$auth['news']}</a>
+					            <a class="list-group-item" href="{:U($auth['newsfabuaddress'],1)}">{$auth['newsfabu']}</a>
 					        </div>
 						</div>
 					</div>

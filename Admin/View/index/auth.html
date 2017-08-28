@@ -1,0 +1,102 @@
+<include file="common/toubu" />
+<include file="common/zuoce" />
+			<div class="col-sm-10">
+				<ol class="breadcrumb">
+				  <li><a href="index.html">首页</a></li>
+				  <li><a href="#">模块管理</a></li>
+				  <li class="active">管理员模块</li>
+				</ol>
+				<div id="web">
+					<h3>注：对应模块下的连接必须选择</h3>
+				<span><span class="glyphicon glyphicon-edit" aria-hidden="true"><strong> 管理员模块</strong></span>
+				<span><span class="glyphicon glyphicon-edit" aria-hidden="true"><strong><a href="{:U('/Admin/IndexUser/adminAdd')}"> 添加管理员</a></strong></span>
+				<hr>
+				    <div class="row">
+				    	<div class="col-sm-12">
+							<table class="table table-hover table-striped">
+								<form class="" action="{:U('/Admin/Auth/auth')}" method="post">
+
+
+								<tr>
+									<th>模块管理</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
+
+								<tr>
+									<td><input type="radio" name="root" value="管理员模块">管理员模块
+									<input type="checkbox" name="rootAddress" value="Admin/IndexUser/admin">管理员连接</td>
+									<td><input type="radio" name="user" value="用户模块">用户模块
+										<input type="checkbox" name="userAddress" value="Admin/IndexUser/user">用户连接</td>
+									<td><input type="radio" name="auth" value="权限管理">权限管理
+										<input type="checkbox" name="authAddress" value="Admin/Auth/auth">权限连接</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+
+
+								</tr>
+								<tr>
+									<th>账户管理</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
+
+								<tr>
+									<td><input type="radio" name="money" value="充值记录">充值记录
+										<input type="checkbox" name="moneyAddress" value="Admin/IndexUser/recharge">充值连接</td>
+									<td><input type="radio" name="toubiao" value="投标记录">投标记录
+										<input type="checkbox" name="toubiaoAddress" value="Admin/IndexUser/bid">投标连接</td>
+									<td><input type="radio" name="jiekuan" value="借款记录">借款记录
+										<input type="checkbox" name="jiekuanAddress" value="Admin/IndexUser/loan">借款连接</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+
+
+								</tr>
+								<tr>
+									<th>新闻管理</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
+
+								<tr>
+									<td><input type="radio" name="news" value="新闻管理">新闻管理
+										<input type="checkbox" name="newsAddress" value="Admin/IndexUser/newslist">新闻连接</td>
+									<td><input type="radio" name="newsfabu" value="新闻发布">新闻发布
+										<input type="checkbox" name="newsfabuAddress" value="Admin/IndexUser/newsadd">发布连接</td>
+									<td><input type="radio" name="pinglun" value="评论列表">评论列表
+										<input type="checkbox" name="pinglunAddress" value="Admin/IndexUser/commlist">评论连接</td>
+									<td></td>
+									<td></td>
+									<td><input type="submit" name="" value="提交"></td>
+									<td><input type="reset" name="" value="重置"></td>
+
+
+								</tr>
+							</form>
+							</table>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

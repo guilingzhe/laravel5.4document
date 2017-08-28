@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0; list-style:none;}
+body{font-size:12px; font-family:"微软雅黑", "宋体"; color:#555555; behavior:url("../other/csshover.htc"); background:#063c57;}
+img{ border:none; margin:0;  padding:0; }
+a{ color:#777; text-decoration:none;}
+a:hover{ text-decoration:none;}
+input{ padding:0; margin:0;}
+ul,li{ list-style:none;}
+{ margin:0; padding:0;}
+
+.main{ width:790px; margin:0 auto; overflow:hidden; background:url(../images/new_logo.png) no-repeat; height:500px; padding-top:8px; margin-top:270px;}
+.main table tr{ margin-top:15px;}
+.main table .btiinpt{ width:270px; height:42px; border:solid 1px #ccc; background:#FFF; border-radius: 6px; display:block;}
+.input{ height:40px; width:226px; border:none; font-size:14px; color:#666; line-height:40px;}
+.main table{ margin-top:20px; padding-left:495px; }
+.main table tr td{ font-size:14px; color:#FFF;}
+.btn{ background:url(../images/dlimg.png) no-repeat; width:269px; height:39px; border:none; cursor:pointer; margin-top:25px;}
+
+
+.foont{ width:500px; margin:0 auto; text-align:center;}
+.foont p{ font-size:14px; color:#c2c9cf; line-height:20px; font-family:"宋体";}
