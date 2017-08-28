@@ -1,0 +1,135 @@
+/*首页修改*/
+.ist_index_tjxm_main1{width:1200px;height:456px;margin:0 auto 20px;}
+.ist_index_tjxm_main1 .ist_index_tjxm_sidebar{width:175px;height:432px;padding:23px 0 7px 25px;background:url("../images/index_new_6_1.jpg")/*tpa=http://www.ishoutou.cn/Style/images/index_new_6_1.jpg*/ no-repeat;overflow:hidden;}
+.ist_index_tjxm_main1 .ist_index_tjxm_sidebar h2{height:32px;line-height:32px;font-size:20px;color:#fff;}
+.ist_index_tjxm_main1 .ist_index_tjxm_sidebar p{height:32px;line-height:32px;margin-bottom:6px;font-size:13px;color:#e3f8ff;}
+.ist_index_tjxm_main1 .ist_index_tjxm_sidebar .ist_tjxm_more{width:70px;height:28px;line-height:28px;border-radius:17px;text-align:center;border:1px solid #fff;font-size:13px;color:#fff;opacity:0.75;}
+.ist_index_tjxm_main1 .ist_index_tjxm_sidebar .ist_tjxm_more:hover{color:#fff;opacity:1;}
+.ist_index_tjxm_main1 .ist_index_tjxm_box1{width:999px;height:454px;border:1px solid #dedede;border-top:1px solid #1ca4d6;border-left:0;background:#fff;}
+.ist_index_tjxm_main1 .ist_index_tjxm_box_tit1{height:46px;line-height:46px;padding:0 20px;background:#f6f6f6;}
+.ist_index_tjxm_main1 .ist_index_tjxm_box_tit1 span{display:block;height:46px;line-height:46px;color:#888;}
+.ist_index_tjxm_box_tit1 span.ist_t1{width:421px;/*width:342px;*/text-indent:34px;}
+.ist_index_tjxm_box_tit1 span.ist_t2{width:160px;text-align:center;}
+.ist_index_tjxm_box_tit1 span.ist_t3{width:97px;text-align:center;}
+.ist_index_tjxm_box_tit1 span.ist_t4{width:170px;text-align:center;}
+.ist_index_tjxm_box_tit1 span.ist_t5{width:110px;/*width:140px;*/}
+.ist_index_tjxm_box_list1{width:999px;}
+.ist_index_tjxm_box_list1 li{width:100%;}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1{height:110px;line-height:110px;margin:0 auto;color:#333;font-size:14px;border-bottom:1px dashed #dedede; padding-left: 22px;/*background:url(../images/818.png) left top no-repeat;*/}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 h2{font-size:16px;}
+.ist_index_tjxm_box_list1 li.last .ist_index_tjxm_box_con1{border-bottom:none;}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 h2.ist_t1_con{width:274px;/*width:342px;*/height:110px;}
+.ist_index_tjxm_box_con1 h2.ist_t1_con span{line-height:16px;display:inline-block;font-size: 12px;width: 50px; height: 16px;text-align: center;margin-left: px; background:#fae3de; border-radius:10px; color:#f52f1b;cursor: default;}  
+.ist_index_tjxm_box_con1 h2.ist_t1_con em.bao{display:block;width:32px;height:32px;margin:38px 10px 0 0;background:url("../images/fang_201705.png")/*tpa=http://www.ishoutou.cn/Style/images/fang_201705.png*/ no-repeat ;background-size:100% 100%;}
+.ist_index_tjxm_box_con1 h2.ist_t1_con em.xiao{display:block;width:32px;height:32px;margin:38px 10px 0 0;background:url("../images/xiao_201705.png")/*tpa=http://www.ishoutou.cn/Style/images/xiao_201705.png*/ no-repeat ;background-size:100% 100%;}
+.ist_index_tjxm_box_con1 h2.ist_t1_con em.wen{display:block;width:32px;height:32px;margin:38px 10px 0 0;background:url("../images/wen_201705.png")/*tpa=http://www.ishoutou.cn/Style/images/wen_201705.png*/ no-repeat ;background-size:100% 100%;}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 h2 .new_tit{float:left;display:block;width:180px;overflow:hidden;/*注意不要写在最后了*/ font-size: 18px; color:#333;white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis;}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 .ist_t2_con{width:140px;height:110px;text-align:center;color:#f52f1b;font-size:24px; }
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 .ist_t2_con i{font-size:14px;}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 .ist_t3_con{width:140px;height:110px;text-align:center;color:#333;font-size:24px; }
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 .ist_t3_con i{font-size:14px;}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 span.ist_t3_con{width:97px;height:110px;text-align:center;font-size:22px;}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 span.ist_t3_con i{font-size:14px;}
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con1 span.ist_t4_con{width:150px;height:110px;font-size:12px;text-align:center;}
+.rote,#rote{ display:inline-block; width:59px; height:59px; line-height:59px; text-align:center; background:url("../img/speed.png")/*tpa=http://www.ishoutou.cn/Style/img/speed.png*/ left top; }
+.rote2,#rote2{ display:inline-block; width:44px; height:44px; line-height:44px;margin-top:36px;text-align:center; background:url("../images/speed_201705.png")/*tpa=http://www.ishoutou.cn/Style/images/speed_201705.png*/ left top;overflow:hidden; }
+.ist_index_tjxm_box_list1 li .ist_index_tjxm_box_con span.ist_t5_con{width:110px;/*width:140px;*/height:67px;text-align:center;}
+.ist_index_tjxm_box_con1 span.ist_t5_con .ist_t5_btn{width:110px;height:33px;line-height:33px;font-size:14px;color:#fff;border-radius:5px;text-align:center;background:#10aadd;}
+.ist_index_tjxm_box_con1 span.ist_t5_con .ist_t5_btn.lan{background:#10aadd;}
+.ist_index_tjxm_box_con1 span.ist_t5_con .ist_t5_btn.hui{background:#d2d2d2;}
+.ist_index_tjxm_box_con1 span.ist_t5_con .ist_t5_btn:hover{color:#fff;}
+.ist_index_tjxm_box_list1 .ist_index_tjxm_box_con1 .ist_t1_con a:hover{color:#0ca1d2;}
+
+/*列表页修改*/
+.h_layb1 ul.fl li a.h_class_s {
+    color: #da471c;
+    border: 1px solid #da471c;
+    border-radius: 5px;
+}
+.h_layb1 .h_layb_font{ height:50px; line-height: 50px;color: #333; font-size:22px; padding-left: 26px;}
+.h_layb1{ height:196px;}
+.h_laya,.h_layb1,.h_touzi_list1{ height:290px; width:1098px; background:#fff; border:1px solid #d9d9d9;}
+.h_layb1{ height:196px;}
+.h_layb1 .h_layb_font{ height:50px; line-height: 50px;color: #333; font-size:22px; padding-left: 26px;}
+.h_laya h1 span.h_day{ background-position:30px -462px;}		 
+.h_laya h1 i{ height:25px; line-height:25px; margin:20px 8px; text-align:center;color:#fff; float:left;}
+.h_laya h1 i.h_prize{ width:87px; background:url("img/icon.gif-v=1")/*tpa=http://www.ishoutou.cn/Style/css/img/icon.gif?v=1*/ no-repeat left -73px;}
+.h_laya h1 i.blue_icon{ width:65px; background:#188cbf; border-radius:5px;}
+.h_laya h1 em{ float:right; height:25px; margin:20px;}
+.h_laya ul.fl{ width:754px; height:225px;}
+.h_laya ul.fl li{ margin:15px 30px; line-height:30px;}
+.h_borrow_top{ height:115px; border-bottom:1px dashed #dcddde;}
+.h_borrow_top span.h_borrow_total{ width:250px;}
+.h_borrow_top span.h_borrow_rate{ width:165px;}
+.h_borrow_top span.h_borrow_date{ width:130px;}
+.h_laya ul.fl li b,.h_laya ul.fl li em,.h_laya ul.fl li a{ display:block;}
+.h_borrow_top span em{ height:55px; line-height:70px; vertical-align:bottom;}
+.h_borrow_top span i{ font-size:30px;}
+.h_borrow_top span.h_borrow_speed{ width:137px; height:65px; margin:25px 0; text-align:center; font-size:16px;border-left: 1px dashed #dcddde;}
+
+.h_borrow_down span{ width:231px; float:left; height:110px;}
+.h_borrow_down span a,.h_laya ul.fr span a.fr{color:#118fc1;}
+
+.h_laya ul.fr{ width:310px; height:195px; padding:15px; border-left:1px solid #da471c; position:relative;}
+.h_arow{ position:absolute; left:-1px; top:123px; width:10px; height:11px; background:url("../img/icon.gif-v=1.gif")/*tpa=http://www.ishoutou.cn/Style/img/icon.gif?v=1*/ no-repeat left -138px;}
+.h_toubiao span{ display:block; /*width:266px;*/ padding-left:10px; height:35px; line-height:35px;}
+.h_toubiao_btn{ width:100%; height:40px; line-height:40px; margin:18px 0; background:#da471c; font-size:18px; color:#fff; text-align:center;}
+.h_submit input{ width:170px; padding-left: 10px; height:34px; border:1px solid #dedede; border-right:0;}
+.h_submit a{width:83px; height:36px; line-height:36px; text-align:center; color:#fff; background:#188cbf;}
+/*tab*/
+.h_tab1{ width:1098px;border:1px solid #dedede; margin-top:16px; background:#fff;}
+.h_tab_tit{ width:100%; height:48px; line-height:48px; background:#f2f9fc; position:relative;}
+.h_tab_tit li{padding:0 25px;float:left; height:48px; cursor:pointer;}
+.h_tab_tit li.h_tab_s{ margin-top:-1px;background:#fff; border-top:1px solid #da471c; color:#da471c;}
+.h_tab_con{ position:relative; width:100%;}
+.h_tab_con ul{ display:block; width:998px; padding:0 50px; padding-bottom:50px;}
+/*gai*/.h_tab_con ul h1,.h_touzi_list1 h1,.h_left_main h1,.h_title{ height:40px; border-bottom:1px solid #dedede; line-height:26px;margin-top:50px; color:#333;}
+.h_tab_con ul h1 a:hover,.h_touzi_list1 h1 a:hover,.h_left_main h1 a:hover,.h_title a:hover,.h_borrow_down span a:hover,.h_laya ul.fr span a:hover.fr,.h_layb1 ul.fr a:hover,.h_long2 a:hover{color:#da471c;}
+.h_left_main h1,.h_title{ margin:10px 15px 22px 15px;}
+.h_pub h1{ margin-bottom:5px;}
+.h_tab_con ul h1 span,.h_touzi_list1 h1 span,.h_left_main h1 b,.h_title b{ padding-left:40px; padding-right:10px; height:34px;*height:39px; background:url("../img/icon.gif-v=1.gif")/*tpa=http://www.ishoutou.cn/Style/img/icon.gif?v=1*/ no-repeat 3px -200px; font-size:16px; border-bottom:3px solid #188cbf;}
+.h_left_main h1 b,.h_title b{ float:left; font-size:18px; background:#fff; padding:0 15px; padding-bottom:5px;*padding-bottom:0; border-color:#da471c;}
+.h_title b{border-color:#1d8ec0;}
+.h_table,.h_table2{ width:100%;border:1px solid #dedede;}
+.h_tab_con ul h1 span.h_tabiconb{ background-position:0 -336px;border-color:#ff6366;}
+.h_tab_con ul h1 span.h_tabiconc{ background-position:0 -276px;border-color:#da471c;}
+.h_tab_con ul h1 span.h_tabpic{ background-position:0 -934px;border-color:#da471c;}
+.h_tab_con p{ text-indent:2em;}
+.h_table th{ height:38px; line-height:38px; text-align:center; border:1px solid #dedede;}
+.h_table td{ height:60px; line-height:60px; text-align:center; border:1px solid #dedede;}
+.h_table2 th,.h_table2 td{ height:99px; text-align:center;}
+.h_table2 th{ background:#f2f9fc;}
+.h_table2 em{ display:block;}
+
+.h_layb1 ul.fl{ width:790px; height:105px; margin:15px 26px; margin-right:0; border-right:1px solid #dedede;}
+.h_layb1 ul.fl li{ float: left; height:40px; font-size: 15px;}
+.h_layb1 ul.fl li em{width:120px;}
+.h_layb1 ul.fl li a{padding:0 14px; margin-right:10px; color:#666; border:1px solid #fff;}
+.h_layb1 ul.fr{ width:267px; margin:44px 0; text-align:center;}
+.h_layb1 ul.fr a{ height:50px; line-height:50px; padding-left:50px; color:#666; background:url("../img/icon.gif")/*tpa=http://www.ishoutou.cn/Style/img/icon.gif*/ no-repeat left -398px; font-size:18px;}
+/*gai*/
+.font16 .ist_t1_con a:hover{color: #0ca1d2;}
+.h_layb1 .btnHover2 a:hover{color:#da471c; border:1px solid #da471c; border-radius:10px;}
+.h_touzi_list1{ height:auto; margin-top:16px;}
+.h_touzi_list1 h1{ margin-top:10px;}
+.h_touzi_list1 .h_touzi tr { border-bottom: 1px dashed #dedede;}
+.h_touzi_list1 h1 span{ background:#fff; border-color:#1d8ec0; padding:0 25px; padding-bottom:5px;*padding-bottom:0; color:#333; font-size:22px;}
+.h_touzi_list1 table{ width:1058px; color:#333;}
+.h_touzi_list1 table th,.h_touzi_list table td{ border-bottom:1px solid #dedede; text-align:left;}
+.h_touzi_list1 table td{height:110px;}
+.h_touzi_list1 table td.font16{ width:300px;}
+.font16 .ist_t1_con .rank{line-height:18px;display:inline-block; font-size: 12px;margin-left:3px ; width: 50px; height: 18px;text-align: center; background:#fae3de; border-radius:10px; color:#f52f1b;cursor: default;}
+.h_touzi_list1 table  .ist_t2_con{width:100px;}
+.h_touzi_list1 table  .ist_t3_con{width:100px;}
+.h_touzi_list1 table td .ist_t1_con em.bao{width:32px;height:32px;margin:38px 10px 0 0;background:url("../images/fang_201705.png")/*tpa=http://www.ishoutou.cn/Style/images/fang_201705.png*/ no-repeat ;background-size:100% 100%;}
+.h_touzi_list1 table td .ist_t1_con em.xiao{display:block;width:32px;height:32px;margin:38px 10px 0 0;background:url("../images/xiao_201705.png")/*tpa=http://www.ishoutou.cn/Style/images/xiao_201705.png*/ no-repeat ;background-size:100% 100%;}
+.h_touzi_list1 table td .ist_t1_con em.wen{display:block;width:32px;height:32px;margin:38px 10px 0 0;background:url("../images/wen_201705.png")/*tpa=http://www.ishoutou.cn/Style/images/wen_201705.png*/ no-repeat ;background-size:100% 100%;}
+.h_touzi_list1 table td .new_tit{width: 245px; height: 110px; line-height: 110px;overflow:hidden;/*注意不要写在最后了*/ font-size: 18px; color:#333;white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis;}
+.h_touzi_list1 table  .ist_t2_con{height:110px;line-height: 86px;text-align:center;color:#f52f1b;font-size:24px; }
+.h_touzi_list1 table  .ist_t2_con i{font-size:14px;}
+.h_touzi_list1 table  .ist_t2_con span{display: block; height: 22px; }
+.h_touzi_list1 table  .ist_t3_con{height:110px;line-height: 86px;text-align:center;color:#333;font-size:24px; }
+.h_touzi_list1 table  .ist_t3_con i{font-size:14px;}
+.h_touzi_list1 table  .ist_t3_con span{display: block; height: 22px; padding-left: 6px;}
+.h_touzi_btn{width: 133px;height: 38px;line-height: 38px;font-size: 18px;text-align: center;color: #fff;border-radius: 3px;background: #018cb5;} 
+.h_touzi_btn:hover {background: #11698f;color: #d3eaf4;}
