@@ -34,11 +34,14 @@ class TouxiangController extends Controller {
    }
    public function uploadd(){
    		// print_r($_FILES);
-   		$lujing = './Public/images/'.mt_rand(100000,999999).$_FILES['tupian']['name'];
-   		$re = move_uploaded_file($_FILES['tupian']['tmp_name'],$lujing);
+   		$lujing = mt_rand(100000,999999).$_FILES['pic']['name'];
+   		$re = move_uploaded_file($_FILES['tupian']['tmp_name'],'./Public/images/'.$lujing);
       $name = $this->name;
    		if($re && $name){
-        var_dump($name);
+          $data = array('name'=>$name);
+          $pic = D('user');
+          $pic->img_url = '/public/images/'.$lujing;
+          $pic->where($data)->save();
    			$this->ajaxReturn(true);
    		}else{
         $this->ajaxReturn(false);
