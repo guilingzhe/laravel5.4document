@@ -1,0 +1,62 @@
+<include file="common/toubu" />
+<include file="common/zuoce" />
+			<div class="col-sm-10">
+				<ol class="breadcrumb">
+				  <li><a href="index.html">首页</a></li>
+				  <li><a href="#">模块管理</a></li>
+				  <li class="active">管理员模块</li>
+				</ol>
+				<div id="web">
+				<span><span class="glyphicon glyphicon-edit" aria-hidden="true"><strong> 管理员模块</strong></span>
+				<hr>
+				    <div class="row">
+				    	<div class="col-sm-12">
+							<table class="table table-hover table-striped">
+								<tr>
+
+									<th>用户名</th>
+									<th>密码</th>
+									<th>权限</th>
+									<th>所属部门</th>
+									<th>操作</th>
+									<th></th>
+								</tr>
+								<!-- 信息添加-->
+								<form class="" action="{:U('/Admin/IndexUser/adminAdd')}" method="post">
+
+								<tr>
+
+									<td><input type="text" name="name" id='reg' value=""></td>
+									<td><input type="text" name="password" value=""></td>
+									<td><select class="" name="privilege">
+										<foreach name='auth1' item='a'>
+										<option value="{$a.privilege}">{$a.privilege}</option>
+									</foreach>
+									</select></td>
+									<td><input type="text" name="department" value=""></td>
+									<td><input type="submit" name="提交" value="提交"></td>
+
+								</tr>
+						</form>
+						<!--  -->
+							</table>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script>
+	$('input:text')[0].blur(function(){
+	var url = '{:U('/Admin/IndexUser/adminAdd')}' + this.value;
+	$.get(url , function(res){//如果获取后台相应的值,jq写了一个封装,你只需要写一个回调函数,并且写一个参数,会自动的把结果返回给你写的回调函数的第if(res == '1') {
+		$('#reg').html('<font color="red">已被占用</font>');
+	} else {
+		$('#reg').html('<font color="green">可以使用</font>');
+			}
+		});
+});
+</script>
+</html>
