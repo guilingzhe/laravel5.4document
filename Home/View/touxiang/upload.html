@@ -29,8 +29,12 @@
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function(){
 			if(this.readyState == 4){
-				alert('上传成功,点击跳转到个人首页');
-				window.location.href="http://p2p.com/Home/IndexUser/index";
+				if(this.responseText == true){
+					alert('上传成功');
+					window.location.href="http://p2p.com/Home/IndexUser/index";
+				}else{
+					alert('上传失败,尚未登录');
+				}
 			}
 		}
 		var url = 'http://p2p.com/index.php/Home/Touxiang/uploadd';

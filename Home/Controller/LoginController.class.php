@@ -14,8 +14,8 @@ class LoginController extends Controller{
 		$data['name'] = $name;
 		$realpwd = D('user')->where($data)->getField('password');
 		if($pwd === $realpwd){
-			$res=setcookie('name',$name,time()+3600*24);
-			var_dump($res);
+			$res=cookie('name',$name);
+			// var_dump($_COOKIE['name']);
 			$this->success('登录成功','/Home/Index/index');
 			setcookie('pwd',md5($name.C('SALT')),time()+3600*24);
 		}else{		

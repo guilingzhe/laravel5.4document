@@ -6,7 +6,7 @@ return array(
     'DB_HOST'               =>  '127.0.0.1', // 服务器地址
     'DB_NAME'               =>  'p2p',          // 数据库名
     'DB_USER'               =>  'root',      // 用户名
-    'DB_PWD'                =>  'root',          // 密码
+    'DB_PWD'                =>  '',          // 密码
     'DB_PORT'               =>  '3306',       // 端口
     'LOG_RECORD'            =>  true,  // 默认不记录日志
     'SHOW_PAGE_TRACE'       =>  true,       //显示页面trace信息
